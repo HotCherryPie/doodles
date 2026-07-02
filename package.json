@@ -1,0 +1,48 @@
+{
+  "//": "READ package.json.md BEFORE ANY CHANGES!",
+  "name": "doodles",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=24.14.1"
+  },
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": ">=24.14.1",
+      "onFail": "error"
+    },
+    "packageManager": {
+      "name": "npm",
+      "version": ">=11.17.0",
+      "onFail": "error"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "vue-tsc -b",
+    "@:eslint-inspect": "eslint --inspect-config",
+    "@:node-modules-inspector": "npx node-modules-inspector",
+    "@:nolyfill": "npx nolyfill"
+  },
+  "dependencies": {
+    "@vueuse/core": "~14.3.0",
+    "dompurify": "~3.4.11",
+    "type-fest": "~5.7.0",
+    "vue": "~3.5.39",
+    "vue-component-type-helpers": "~3.3.5",
+    "vue-router": "~5.1.0"
+  },
+  "devDependencies": {
+    "@my/configs.js": "github:HotCherryPie/configs.js.git#v0.0.0-alpha-20",
+    "@my/utils.css": "github:HotCherryPie/utils.css.git#v0.0.0-alpha-8",
+    "@types/node": "~24.13.2",
+    "@vitejs/plugin-vue": "~6.0.7",
+    "typescript": "~6.0.3",
+    "vite": "8.1.0",
+    "vue-tsc": "~3.3.5"
+  }
+}
