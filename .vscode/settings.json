@@ -19,10 +19,9 @@
   "js/ts.tsdk.path": "node_modules/typescript/lib",
   "js/ts.tsdk.promptToUseWorkspaceVersion": true,
 
-  // "git.branchProtection": ["master"],
-
   "json.schemaDownload.trustedDomains": {
-    "https://nodejs.org/docs/": true
+    "https://nodejs.org/docs/": true,
+    "https://raw.githubusercontent.com/streetsidesoftware/cspell/": true
   },
 
   "npm.scriptRunner": "npm",
@@ -33,16 +32,6 @@
   "eslint.enable": true,
   "eslint.format.enable": true,
   "eslint.runtime": "node",
-
-  "cSpell.language": "en-001",
-  "cSpell.words": [
-    "bento",
-    "browserslistrc",
-    "nolyfill",
-    "sonarjs",
-    "superellipse",
-    "uncategorized"
-  ],
 
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"

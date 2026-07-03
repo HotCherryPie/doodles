@@ -3,8 +3,23 @@
 </template>
 
 <style lang="css" module>
-@function --filter-paint() {
-  result: url("data:image/svg+xml,\
+.it {
+  font-family: 'Sacramento';
+  max-width: max-content;
+  max-height: max-content;
+  padding-block-end: 0.1em;
+
+  color: transparent;
+  background-clip: text;
+  background-image: conic-gradient(
+    from -25deg,
+    #ff1b8e 0deg 90deg,
+    #ffd900 120deg 240deg,
+    #1bb2ff 240deg
+  );
+
+  /* --filter-paint */
+  filter: url("data:image/svg+xml,\
     <svg xmlns='http://www.w3.org/2000/svg'>\
       <defs>\
         <filter x='-20%' y='-20%' width='140%' height='140%' filterUnits='objectBoundingBox' id='filter'>\
@@ -21,21 +36,5 @@
         </filter>\
       </defs>\
     </svg>#filter");
-}
-
-.it {
-  max-width: max-content;
-  max-height: max-content;
-  padding-block-end: 0.1em;
-  font-family: 'Sacramento';
-  background: conic-gradient(
-    from -25deg,
-    #ff1b8e 0deg 90deg,
-    #ffd900 120deg 240deg,
-    #1bb2ff 240deg
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: --filter-paint();
 }
 </style>
