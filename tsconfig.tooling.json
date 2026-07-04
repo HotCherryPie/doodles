@@ -1,9 +1,13 @@
 {
   "extends": [
-    "@my/configs.js/tsconfig.base.json",
-    "@my/configs.js/tsconfig.base.node@24.json"
+    "@(67)/configs.js/tsconfig.base.json",
+    "@(67)/configs.js/tsconfig.base.node@24.json"
   ],
-  "include": ["**/eslint.config.*", "**/prettier.config.*", "**/vite.config.ts"],
+  "include": [
+    "**/eslint.config.*",
+    "**/prettier.config.*",
+    "**/vite.config.ts"
+  ],
 
   "compilerOptions": {
     // Without this `*.tsbuildinfo` file will be created on project root.

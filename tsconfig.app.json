@@ -1,7 +1,7 @@
 {
   "extends": [
-    "@my/configs.js/tsconfig.base.json",
-    "@my/configs.js/tsconfig.base.vite.json"
+    "@(67)/configs.js/tsconfig.base.json",
+    "@(67)/configs.js/tsconfig.base.vite.json"
   ],
   "include": ["src/**/*", "src/**/*.vue"],
 

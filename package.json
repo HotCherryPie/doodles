@@ -4,6 +4,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HotCherryPie/doodles.git"
+  },
   "engines": {
     "node": ">=24.14.1"
   },
@@ -37,8 +41,9 @@
     "vue-router": "~5.1.0"
   },
   "devDependencies": {
-    "@my/configs.js": "github:HotCherryPie/configs.js.git#v0.0.0-alpha-20",
-    "@my/utils.css": "github:HotCherryPie/utils.css.git#v0.0.0-alpha-8",
+    "@(67)/configs.js": "github:HotCherryPie/configs.js.git#v0.0.0-alpha-22",
+    "@(67)/utils.css": "github:HotCherryPie/utils.css.git#v0.0.0-alpha-11",
+    "@babel/types": "~8.0.0",
     "@types/node": "~24.13.2",
     "@vitejs/plugin-vue": "~6.0.7",
     "eslint": "~10.6.0",
