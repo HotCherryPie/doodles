@@ -12,6 +12,8 @@ import { RouterView } from 'vue-router';
 
 body {
   min-height: 100svh;
+  display: flex;
+  flex-direction: column;
 }
 
 #app {

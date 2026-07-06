@@ -34,8 +34,9 @@
   },
   "dependencies": {
     "@vueuse/core": "~14.3.0",
+    "@web-kits/audio": "~0.1.0",
     "dompurify": "~3.4.11",
-    "type-fest": "~5.7.0",
+    "type-fest": "~5.8.0",
     "vue": "~3.5.39",
     "vue-component-type-helpers": "~3.3.6",
     "vue-router": "~5.1.0"

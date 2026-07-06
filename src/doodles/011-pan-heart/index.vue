@@ -1,23 +1,20 @@
 <script setup lang="ts">
 import { PanHeart } from '../../bits';
+import { Bento } from '../../components';
 </script>
 
 <template>
-  <div :class="$style.it">
+  <Bento.Cell :w="3" :h="3" inert>
     <PanHeart :class="$style.heart" />
-    <div :class="$style.text">
+    <div v-if="false" :class="$style.text">
       <span style="--color: #ff218c">P</span>
       <span style="--color: #ffd800">a</span>
       <span style="--color: #21b1ff">n</span>
     </div>
-  </div>
+  </Bento.Cell>
 </template>
 
 <style lang="css" module>
-.it {
-  position: relative;
-}
-
 .text {
   /* position: absolute; */
   font-family: Blaktur;
