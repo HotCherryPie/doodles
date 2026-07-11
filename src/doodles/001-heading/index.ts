@@ -1,1 +1,3 @@
-export { default as Heading } from './index.vue';
+export { default } from './index.vue';
+
+export const name = 'Heading';

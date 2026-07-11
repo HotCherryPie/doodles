@@ -4,6 +4,11 @@ import type { Slot } from 'vue';
 defineSlots<{
   default: Slot;
 }>();
+
+defineProps<{
+  gap: CSSValueType.AbsoluteSize;
+  scale: CSSValueType.AbsoluteSize;
+}>();
 </script>
 
 <template>
@@ -16,10 +21,12 @@ defineSlots<{
 .it {
   display: grid;
   grid-auto-flow: row dense;
-  grid-template-columns: repeat(auto-fill, 32px);
-  /* grid-template-rows: repeat(auto-fill, 32px); */
-  grid-template-rows: repeat(30, 32px);
+  grid-template-columns: repeat(auto-fill, v-bind(scale));
+  /* grid-template-rows: repeat(auto-fill, v-bind(scale)); */
+  grid-template-rows: repeat(30, v-bind(scale));
   justify-content: center;
-  gap: 8px;
+  gap: v-bind(gap);
+
+  user-select: none;
 }
 </style>

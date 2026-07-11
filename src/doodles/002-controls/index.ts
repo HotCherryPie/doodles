@@ -1,1 +1,3 @@
-export { default as Controls } from './index.vue';
+export { default } from './index.vue';
+
+export const name = 'Controls';

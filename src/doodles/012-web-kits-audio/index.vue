@@ -11,6 +11,7 @@ import { sounds } from './sounds';
         v-for="(sound, i) of sounds"
         :key="i"
         type="button"
+        data-silent
         :class="$style.btn"
         @click="sound()"
       >

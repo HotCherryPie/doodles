@@ -1,1 +1,3 @@
-export { default as IosActivityIndicator } from './index.vue';
+export { default } from './index.vue';
+
+export const name = 'iOS ActivityIndicator';

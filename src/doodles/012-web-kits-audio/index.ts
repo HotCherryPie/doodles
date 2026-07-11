@@ -1,1 +1,3 @@
-export { default as WebKitsAudio } from './index.vue';
+export { default } from './index.vue';
+
+export const name = "WebKit's Audio";
