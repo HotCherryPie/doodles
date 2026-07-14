@@ -11,7 +11,6 @@ export const primitives = {
         },
         filter: { type: 'lowpass', frequency: 1400, resonance: 1.2 },
         envelope: { attack: 0, decay: 0.034, sustain: 0, release: 0.012 },
-        delay: 0.008,
         gain: 0.05,
       },
     ],

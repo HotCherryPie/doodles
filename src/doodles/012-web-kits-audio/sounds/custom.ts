@@ -5,47 +5,20 @@ export const custom = {
     layers: [
       // Sharp key-cap / mechanism click
       {
-        source: {
-          type: 'noise',
-          color: 'white',
-        },
+        source: { type: 'noise', color: 'white' },
         filter: [
-          {
-            type: 'highpass',
-            frequency: 1800,
-          },
-          {
-            type: 'bandpass',
-            frequency: 4200,
-            resonance: 4.5,
-          },
+          { type: 'highpass', frequency: 1800 },
+          { type: 'bandpass', frequency: 4200, resonance: 4.5 },
         ],
-        envelope: {
-          attack: 0,
-          decay: 0.012,
-          sustain: 0,
-          release: 0.004,
-        },
+        envelope: { attack: 0, decay: 0.012, sustain: 0, release: 0.004 },
         gain: 0.12,
       },
 
       // Heavier body impact
       {
-        source: {
-          type: 'noise',
-          color: 'pink',
-        },
-        filter: {
-          type: 'bandpass',
-          frequency: 1250,
-          resonance: 2.2,
-        },
-        envelope: {
-          attack: 0,
-          decay: 0.035,
-          sustain: 0,
-          release: 0.01,
-        },
+        source: { type: 'noise', color: 'pink' },
+        filter: { type: 'bandpass', frequency: 1250, resonance: 2.2 },
+        envelope: { attack: 0, decay: 0.035, sustain: 0, release: 0.01 },
         delay: 0.003,
         gain: 0.09,
       },
@@ -54,72 +27,34 @@ export const custom = {
       {
         source: {
           type: 'triangle',
-          frequency: {
-            start: 3100,
-            end: 1800,
-          },
+          frequency: { start: 3100, end: 1800 },
         },
-        filter: {
-          type: 'bandpass',
-          frequency: 2400,
-          resonance: 7,
-        },
-        envelope: {
-          attack: 0,
-          decay: 0.028,
-          sustain: 0,
-          release: 0.008,
-        },
+        filter: { type: 'bandpass', frequency: 2400, resonance: 7 },
+        envelope: { attack: 0, decay: 0.028, sustain: 0, release: 0.008 },
         delay: 0.006,
         gain: 0.035,
       },
     ],
   },
+
   b: {
     layers: [
       // Hard initial strike
       {
-        source: {
-          type: 'noise',
-          color: 'white',
-        },
+        source: { type: 'noise', color: 'white' },
         filter: [
-          {
-            type: 'highpass',
-            frequency: 1100,
-          },
-          {
-            type: 'bandpass',
-            frequency: 3000,
-            resonance: 3.5,
-          },
+          { type: 'highpass', frequency: 1100 },
+          { type: 'bandpass', frequency: 3000, resonance: 3.5 },
         ],
-        envelope: {
-          attack: 0,
-          decay: 0.018,
-          sustain: 0,
-          release: 0.006,
-        },
+        envelope: { attack: 0, decay: 0.018, sustain: 0, release: 0.006 },
         gain: 0.2,
       },
 
       // Heavy mechanical impact
       {
-        source: {
-          type: 'noise',
-          color: 'pink',
-        },
-        filter: {
-          type: 'bandpass',
-          frequency: 700,
-          resonance: 2.8,
-        },
-        envelope: {
-          attack: 0,
-          decay: 0.055,
-          sustain: 0,
-          release: 0.015,
-        },
+        source: { type: 'noise', color: 'pink' },
+        filter: { type: 'bandpass', frequency: 700, resonance: 2.8 },
+        envelope: { attack: 0, decay: 0.055, sustain: 0, release: 0.015 },
         delay: 0.002,
         gain: 0.19,
       },
@@ -128,22 +63,10 @@ export const custom = {
       {
         source: {
           type: 'triangle',
-          frequency: {
-            start: 240,
-            end: 105,
-          },
+          frequency: { start: 240, end: 105 },
         },
-        filter: {
-          type: 'lowpass',
-          frequency: 480,
-          resonance: 1.5,
-        },
-        envelope: {
-          attack: 0,
-          decay: 0.065,
-          sustain: 0,
-          release: 0.018,
-        },
+        filter: { type: 'lowpass', frequency: 480, resonance: 1.5 },
+        envelope: { attack: 0, decay: 0.065, sustain: 0, release: 0.018 },
         delay: 0.003,
         gain: 0.16,
       },
@@ -152,43 +75,19 @@ export const custom = {
       {
         source: {
           type: 'triangle',
-          frequency: {
-            start: 2300,
-            end: 1200,
-          },
+          frequency: { start: 2300, end: 1200 },
         },
-        filter: {
-          type: 'bandpass',
-          frequency: 1750,
-          resonance: 6,
-        },
-        envelope: {
-          attack: 0,
-          decay: 0.04,
-          sustain: 0,
-          release: 0.012,
-        },
+        filter: { type: 'bandpass', frequency: 1750, resonance: 6 },
+        envelope: { attack: 0, decay: 0.04, sustain: 0, release: 0.012 },
         delay: 0.006,
         gain: 0.065,
       },
 
       // Delayed mechanism knock
       {
-        source: {
-          type: 'noise',
-          color: 'pink',
-        },
-        filter: {
-          type: 'bandpass',
-          frequency: 430,
-          resonance: 3.2,
-        },
-        envelope: {
-          attack: 0,
-          decay: 0.025,
-          sustain: 0,
-          release: 0.01,
-        },
+        source: { type: 'noise', color: 'pink' },
+        filter: { type: 'bandpass', frequency: 430, resonance: 3.2 },
+        envelope: { attack: 0, decay: 0.025, sustain: 0, release: 0.01 },
         delay: 0.012,
         gain: 0.1,
       },
@@ -200,154 +99,66 @@ export const custom = {
     layers: [
       // Main paper fold and rubbing texture
       {
-        source: {
-          type: 'noise',
-          color: 'pink',
-        },
+        source: { type: 'noise', color: 'pink' },
         filter: [
-          {
-            type: 'highpass',
-            frequency: 180,
-            resonance: 0.7,
-          },
+          { type: 'highpass', frequency: 180, resonance: 0.7 },
           {
             type: 'lowpass',
             frequency: 3200,
             resonance: 1.2,
-            envelope: {
-              attack: 0.025,
-              peak: 5600,
-              decay: 0.3,
-            },
+            envelope: { attack: 0.025, peak: 5600, decay: 0.3 },
           },
         ],
-        envelope: {
-          attack: 0.015,
-          decay: 0.42,
-          sustain: 0,
-          release: 0.025,
-        },
+        envelope: { attack: 0.015, decay: 0.42, sustain: 0, release: 0.025 },
         gain: 0.13,
       },
 
       // Dense central crease
       {
-        source: {
-          type: 'noise',
-          color: 'brown',
-        },
-        filter: {
-          type: 'bandpass',
-          frequency: 850,
-          resonance: 1.6,
-        },
-        envelope: {
-          attack: 0.012,
-          decay: 0.28,
-          sustain: 0,
-          release: 0.015,
-        },
+        source: { type: 'noise', color: 'brown' },
+        filter: { type: 'bandpass', frequency: 850, resonance: 1.6 },
+        envelope: { attack: 0.012, decay: 0.28, sustain: 0, release: 0.015 },
         delay: 0.055,
         gain: 0.07,
       },
 
       // Sharp paper crackles
       {
-        source: {
-          type: 'noise',
-          color: 'white',
-        },
-        filter: {
-          type: 'bandpass',
-          frequency: 5400,
-          resonance: 5,
-        },
-        envelope: {
-          attack: 0,
-          decay: 0.012,
-          sustain: 0,
-          release: 0.005,
-        },
+        source: { type: 'noise', color: 'white' },
+        filter: { type: 'bandpass', frequency: 5400, resonance: 5 },
+        envelope: { attack: 0, decay: 0.012, sustain: 0, release: 0.005 },
         delay: 0.025,
         pan: -0.35,
         gain: 0.055,
       },
       {
-        source: {
-          type: 'noise',
-          color: 'white',
-        },
-        filter: {
-          type: 'bandpass',
-          frequency: 3900,
-          resonance: 4,
-        },
-        envelope: {
-          attack: 0,
-          decay: 0.022,
-          sustain: 0,
-          release: 0.005,
-        },
+        source: { type: 'noise', color: 'white' },
+        filter: { type: 'bandpass', frequency: 3900, resonance: 4 },
+        envelope: { attack: 0, decay: 0.022, sustain: 0, release: 0.005 },
         delay: 0.082,
         pan: 0.25,
         gain: 0.05,
       },
       {
-        source: {
-          type: 'noise',
-          color: 'white',
-        },
-        filter: {
-          type: 'bandpass',
-          frequency: 6600,
-          resonance: 6,
-        },
-        envelope: {
-          attack: 0,
-          decay: 0.009,
-          sustain: 0,
-          release: 0.005,
-        },
+        source: { type: 'noise', color: 'white' },
+        filter: { type: 'bandpass', frequency: 6600, resonance: 6 },
+        envelope: { attack: 0, decay: 0.009, sustain: 0, release: 0.005 },
         delay: 0.137,
         pan: -0.15,
         gain: 0.045,
       },
       {
-        source: {
-          type: 'noise',
-          color: 'pink',
-        },
-        filter: {
-          type: 'bandpass',
-          frequency: 2300,
-          resonance: 3.5,
-        },
-        envelope: {
-          attack: 0,
-          decay: 0.032,
-          sustain: 0,
-          release: 0.008,
-        },
+        source: { type: 'noise', color: 'pink' },
+        filter: { type: 'bandpass', frequency: 2300, resonance: 3.5 },
+        envelope: { attack: 0, decay: 0.032, sustain: 0, release: 0.008 },
         delay: 0.205,
         pan: 0.4,
         gain: 0.05,
       },
       {
-        source: {
-          type: 'noise',
-          color: 'white',
-        },
-        filter: {
-          type: 'bandpass',
-          frequency: 4700,
-          resonance: 4.5,
-        },
-        envelope: {
-          attack: 0,
-          decay: 0.016,
-          sustain: 0,
-          release: 0.005,
-        },
+        source: { type: 'noise', color: 'white' },
+        filter: { type: 'bandpass', frequency: 4700, resonance: 4.5 },
+        envelope: { attack: 0, decay: 0.016, sustain: 0, release: 0.005 },
         delay: 0.285,
         pan: -0.3,
         gain: 0.04,
@@ -355,27 +166,12 @@ export const custom = {
 
       // Final compressed-paper crunch
       {
-        source: {
-          type: 'noise',
-          color: 'pink',
-        },
+        source: { type: 'noise', color: 'pink' },
         filter: [
-          {
-            type: 'highpass',
-            frequency: 350,
-          },
-          {
-            type: 'lowpass',
-            frequency: 2400,
-            resonance: 2,
-          },
+          { type: 'highpass', frequency: 350 },
+          { type: 'lowpass', frequency: 2400, resonance: 2 },
         ],
-        envelope: {
-          attack: 0,
-          decay: 0.095,
-          sustain: 0,
-          release: 0.012,
-        },
+        envelope: { attack: 0, decay: 0.095, sustain: 0, release: 0.012 },
         delay: 0.34,
         gain: 0.065,
       },
@@ -387,48 +183,20 @@ export const custom = {
     layers: [
       // Soft paper compression
       {
-        source: {
-          type: 'noise',
-          color: 'pink',
-        },
+        source: { type: 'noise', color: 'pink' },
         filter: [
-          {
-            type: 'highpass',
-            frequency: 650,
-            resonance: 0.7,
-          },
-          {
-            type: 'lowpass',
-            frequency: 3800,
-            resonance: 0.8,
-          },
+          { type: 'highpass', frequency: 650, resonance: 0.7 },
+          { type: 'lowpass', frequency: 3800, resonance: 0.8 },
         ],
-        envelope: {
-          attack: 0.012,
-          decay: 0.13,
-          sustain: 0,
-          release: 0.01,
-        },
+        envelope: { attack: 0.012, decay: 0.13, sustain: 0, release: 0.01 },
         gain: 0.045,
       },
 
       // First small crease
       {
-        source: {
-          type: 'noise',
-          color: 'white',
-        },
-        filter: {
-          type: 'bandpass',
-          frequency: 3600,
-          resonance: 2.5,
-        },
-        envelope: {
-          attack: 0.003,
-          decay: 0.018,
-          sustain: 0,
-          release: 0.004,
-        },
+        source: { type: 'noise', color: 'white' },
+        filter: { type: 'bandpass', frequency: 3600, resonance: 2.5 },
+        envelope: { attack: 0.003, decay: 0.018, sustain: 0, release: 0.004 },
         delay: 0.025,
         pan: -0.2,
         gain: 0.018,
@@ -436,21 +204,9 @@ export const custom = {
 
       // Softer central fold
       {
-        source: {
-          type: 'noise',
-          color: 'pink',
-        },
-        filter: {
-          type: 'bandpass',
-          frequency: 2100,
-          resonance: 1.8,
-        },
-        envelope: {
-          attack: 0.004,
-          decay: 0.03,
-          sustain: 0,
-          release: 0.005,
-        },
+        source: { type: 'noise', color: 'pink' },
+        filter: { type: 'bandpass', frequency: 2100, resonance: 1.8 },
+        envelope: { attack: 0.004, decay: 0.03, sustain: 0, release: 0.005 },
         delay: 0.07,
         pan: 0.2,
         gain: 0.022,
@@ -458,21 +214,9 @@ export const custom = {
 
       // Quiet finishing rustle
       {
-        source: {
-          type: 'noise',
-          color: 'pink',
-        },
-        filter: {
-          type: 'bandpass',
-          frequency: 1400,
-          resonance: 1.2,
-        },
-        envelope: {
-          attack: 0.008,
-          decay: 0.045,
-          sustain: 0,
-          release: 0.006,
-        },
+        source: { type: 'noise', color: 'pink' },
+        filter: { type: 'bandpass', frequency: 1400, resonance: 1.2 },
+        envelope: { attack: 0.008, decay: 0.045, sustain: 0, release: 0.006 },
         delay: 0.105,
         pan: -0.1,
         gain: 0.016,
@@ -485,59 +229,28 @@ export const custom = {
     layers: [
       // Thin wrapper movement underneath the crackles
       {
-        source: {
-          type: 'noise',
-          color: 'pink',
-        },
+        source: { type: 'noise', color: 'pink' },
         filter: [
-          {
-            type: 'highpass',
-            frequency: 1100,
-            resonance: 0.7,
-          },
+          { type: 'highpass', frequency: 1100, resonance: 0.7 },
           {
             type: 'lowpass',
             frequency: 6200,
             resonance: 0.8,
-            envelope: {
-              attack: 0.018,
-              peak: 8800,
-              decay: 0.11,
-            },
+            envelope: { attack: 0.018, peak: 8800, decay: 0.11 },
           },
         ],
-        envelope: {
-          attack: 0.006,
-          decay: 0.15,
-          sustain: 0,
-          release: 0.006,
-        },
+        envelope: { attack: 0.006, decay: 0.15, sustain: 0, release: 0.006 },
         gain: 0.032,
       },
 
       // Initial wrapper bend — not instantaneous
       {
-        source: {
-          type: 'noise',
-          color: 'white',
-        },
+        source: { type: 'noise', color: 'white' },
         filter: [
-          {
-            type: 'highpass',
-            frequency: 2400,
-          },
-          {
-            type: 'bandpass',
-            frequency: 4400,
-            resonance: 2.1,
-          },
+          { type: 'highpass', frequency: 2400 },
+          { type: 'bandpass', frequency: 4400, resonance: 2.1 },
         ],
-        envelope: {
-          attack: 0.003,
-          decay: 0.022,
-          sustain: 0,
-          release: 0.003,
-        },
+        envelope: { attack: 0.003, decay: 0.022, sustain: 0, release: 0.003 },
         delay: 0.012,
         pan: -0.2,
         gain: 0.022,
@@ -545,21 +258,9 @@ export const custom = {
 
       // Small crisp crease
       {
-        source: {
-          type: 'noise',
-          color: 'white',
-        },
-        filter: {
-          type: 'bandpass',
-          frequency: 7100,
-          resonance: 3.2,
-        },
-        envelope: {
-          attack: 0.002,
-          decay: 0.011,
-          sustain: 0,
-          release: 0.002,
-        },
+        source: { type: 'noise', color: 'white' },
+        filter: { type: 'bandpass', frequency: 7100, resonance: 3.2 },
+        envelope: { attack: 0.002, decay: 0.011, sustain: 0, release: 0.002 },
         delay: 0.038,
         pan: 0.3,
         gain: 0.017,
@@ -567,27 +268,12 @@ export const custom = {
 
       // Wider paper fold
       {
-        source: {
-          type: 'noise',
-          color: 'pink',
-        },
+        source: { type: 'noise', color: 'pink' },
         filter: [
-          {
-            type: 'highpass',
-            frequency: 1700,
-          },
-          {
-            type: 'bandpass',
-            frequency: 3300,
-            resonance: 1.7,
-          },
+          { type: 'highpass', frequency: 1700 },
+          { type: 'bandpass', frequency: 3300, resonance: 1.7 },
         ],
-        envelope: {
-          attack: 0.004,
-          decay: 0.03,
-          sustain: 0,
-          release: 0.004,
-        },
+        envelope: { attack: 0.004, decay: 0.03, sustain: 0, release: 0.004 },
         delay: 0.061,
         pan: -0.1,
         gain: 0.024,
@@ -595,21 +281,9 @@ export const custom = {
 
       // Bright cellophane-like crackle
       {
-        source: {
-          type: 'noise',
-          color: 'white',
-        },
-        filter: {
-          type: 'bandpass',
-          frequency: 8200,
-          resonance: 3.8,
-        },
-        envelope: {
-          attack: 0.0015,
-          decay: 0.008,
-          sustain: 0,
-          release: 0.002,
-        },
+        source: { type: 'noise', color: 'white' },
+        filter: { type: 'bandpass', frequency: 8200, resonance: 3.8 },
+        envelope: { attack: 0.0015, decay: 0.008, sustain: 0, release: 0.002 },
         delay: 0.087,
         pan: 0.4,
         gain: 0.014,
@@ -617,26 +291,12 @@ export const custom = {
 
       // Second uneven crease
       {
-        source: {
-          type: 'noise',
-          color: 'white',
-        },
+        source: { type: 'noise', color: 'white' },
         filter: [
-          {
-            type: 'highpass',
-            frequency: 2900,
-          },
-          {
-            type: 'lowpass',
-            frequency: 7600,
-          },
+          { type: 'highpass', frequency: 2900 },
+          { type: 'lowpass', frequency: 7600 },
         ],
-        envelope: {
-          attack: 0.002,
-          decay: 0.017,
-          sustain: 0,
-          release: 0.002,
-        },
+        envelope: { attack: 0.002, decay: 0.017, sustain: 0, release: 0.002 },
         delay: 0.112,
         pan: -0.35,
         gain: 0.018,
@@ -644,21 +304,9 @@ export const custom = {
 
       // Quiet final wrapper release
       {
-        source: {
-          type: 'noise',
-          color: 'pink',
-        },
-        filter: {
-          type: 'bandpass',
-          frequency: 2700,
-          resonance: 1.4,
-        },
-        envelope: {
-          attack: 0.004,
-          decay: 0.028,
-          sustain: 0,
-          release: 0.004,
-        },
+        source: { type: 'noise', color: 'pink' },
+        filter: { type: 'bandpass', frequency: 2700, resonance: 1.4 },
+        envelope: { attack: 0.004, decay: 0.028, sustain: 0, release: 0.004 },
         delay: 0.137,
         pan: 0.15,
         gain: 0.016,
@@ -718,21 +366,9 @@ export const custom = {
     layers: [
       // Metallic click
       {
-        source: {
-          type: `noise`,
-          color: `white`,
-        },
-        filter: {
-          type: `bandpass`,
-          frequency: 2950,
-          resonance: 1.2,
-        },
-        envelope: {
-          attack: 0,
-          decay: 0.005,
-          sustain: 0,
-          release: 0.002,
-        },
+        source: { type: `noise`, color: `white` },
+        filter: { type: `bandpass`, frequency: 2950, resonance: 1.2 },
+        envelope: { attack: 0, decay: 0.005, sustain: 0, release: 0.002 },
         gain: 0.95,
       },
 

@@ -7,30 +7,15 @@ export const rd = {
   press: {
     layers: [
       {
-        source: {
-          type: `noise`,
-          color: `white`,
-        },
-        filter: {
-          type: `bandpass`,
-          frequency: 2100,
-          resonance: 0.9,
-        },
-        envelope: {
-          attack: 0,
-          decay: 0.006,
-          sustain: 0,
-          release: 0.003,
-        },
+        source: { type: `noise`, color: `white` },
+        filter: { type: `bandpass`, frequency: 2100, resonance: 0.9 },
+        envelope: { attack: 0, decay: 0.006, sustain: 0, release: 0.003 },
         gain: 0.11,
       },
       {
         source: {
           type: `triangle`,
-          frequency: {
-            start: 520,
-            end: 430,
-          },
+          frequency: { start: 520, end: 430 },
         },
         envelope: {
           attack: 0.001,
@@ -43,14 +28,8 @@ export const rd = {
       {
         source: {
           type: `sine`,
-          frequency: {
-            start: 1220,
-            end: 880,
-          },
-          fm: {
-            ratio: 0.5,
-            depth: 35,
-          },
+          frequency: { start: 1220, end: 880 },
+          fm: { ratio: 0.5, depth: 35 },
         },
         envelope: {
           attack: 0.001,
@@ -65,15 +44,8 @@ export const rd = {
   pressOutline: {
     layers: [
       {
-        source: {
-          type: `noise`,
-          color: `white`,
-        },
-        filter: {
-          type: `bandpass`,
-          frequency: 2950,
-          resonance: 1.2,
-        },
+        source: { type: `noise`, color: `white` },
+        filter: { type: `bandpass`, frequency: 2950, resonance: 1.2 },
         envelope: {
           attack: 0,
           decay: 0.005,
@@ -85,14 +57,8 @@ export const rd = {
       {
         source: {
           type: `sine`,
-          frequency: {
-            start: 1250,
-            end: 970,
-          },
-          fm: {
-            ratio: 0.5,
-            depth: 48,
-          },
+          frequency: { start: 1250, end: 970 },
+          fm: { ratio: 0.5, depth: 48 },
         },
         envelope: {
           attack: 0.001,
@@ -105,10 +71,7 @@ export const rd = {
       {
         source: {
           type: `triangle`,
-          frequency: {
-            start: 220,
-            end: 150,
-          },
+          frequency: { start: 220, end: 150 },
         },
         envelope: {
           attack: 0,
@@ -123,15 +86,8 @@ export const rd = {
   pressSoft: {
     layers: [
       {
-        source: {
-          type: `noise`,
-          color: `pink`,
-        },
-        filter: {
-          type: `bandpass`,
-          frequency: 1980,
-          resonance: 0.85,
-        },
+        source: { type: `noise`, color: `pink` },
+        filter: { type: `bandpass`, frequency: 1980, resonance: 0.85 },
         envelope: {
           attack: 0,
           decay: 0.007,
@@ -143,14 +99,8 @@ export const rd = {
       {
         source: {
           type: `sine`,
-          frequency: {
-            start: 760,
-            end: 580,
-          },
-          fm: {
-            ratio: 0.5,
-            depth: 24,
-          },
+          frequency: { start: 760, end: 580 },
+          fm: { ratio: 0.5, depth: 24 },
         },
         filter: {
           type: `lowpass`,
@@ -168,10 +118,7 @@ export const rd = {
       {
         source: {
           type: `sine`,
-          frequency: {
-            start: 1420,
-            end: 1100,
-          },
+          frequency: { start: 1420, end: 1100 },
         },
         envelope: {
           attack: 0.001,
@@ -186,10 +133,7 @@ export const rd = {
   pressGhost: {
     layers: [
       {
-        source: {
-          type: `noise`,
-          color: `white`,
-        },
+        source: { type: `noise`, color: `white` },
         filter: {
           type: `bandpass`,
           frequency: 7200,
@@ -206,14 +150,8 @@ export const rd = {
       {
         source: {
           type: `sine`,
-          frequency: {
-            start: 2200,
-            end: 1800,
-          },
-          fm: {
-            ratio: 0.5,
-            depth: 42,
-          },
+          frequency: { start: 2200, end: 1800 },
+          fm: { ratio: 0.5, depth: 42 },
         },
         envelope: {
           attack: 0,
@@ -226,10 +164,7 @@ export const rd = {
       {
         source: {
           type: `triangle`,
-          frequency: {
-            start: 320,
-            end: 240,
-          },
+          frequency: { start: 320, end: 240 },
         },
         envelope: {
           attack: 0,
@@ -244,10 +179,7 @@ export const rd = {
   pop: {
     source: {
       type: `sine`,
-      frequency: {
-        start: 300,
-        end: 2e3,
-      },
+      frequency: { start: 300, end: 2e3 },
     },
     envelope: {
       attack: 0.008,
@@ -260,10 +192,7 @@ export const rd = {
   select: {
     source: {
       type: `sine`,
-      frequency: {
-        start: 860,
-        end: 1040,
-      },
+      frequency: { start: 860, end: 1040 },
     },
     envelope: {
       attack: 0.001,
@@ -276,10 +205,7 @@ export const rd = {
   toggleOn: {
     layers: [
       {
-        source: {
-          type: `sine`,
-          frequency: 520,
-        },
+        source: { type: `sine`, frequency: 520 },
         envelope: {
           attack: 0.001,
           decay: 0.065,
@@ -289,10 +215,7 @@ export const rd = {
         gain: 1,
       },
       {
-        source: {
-          type: `sine`,
-          frequency: 760,
-        },
+        source: { type: `sine`, frequency: 760 },
         envelope: {
           attack: 0.001,
           decay: 0.07,
@@ -307,10 +230,7 @@ export const rd = {
   toggleOff: {
     layers: [
       {
-        source: {
-          type: `sine`,
-          frequency: 620,
-        },
+        source: { type: `sine`, frequency: 620 },
         envelope: {
           attack: 0.001,
           decay: 0.055,
@@ -320,10 +240,7 @@ export const rd = {
         gain: 1,
       },
       {
-        source: {
-          type: `sine`,
-          frequency: 410,
-        },
+        source: { type: `sine`, frequency: 410 },
         envelope: {
           attack: 0.001,
           decay: 0.055,
