@@ -30,6 +30,7 @@ import { sounds } from './sounds';
   display: flex;
   gap: 4px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .btn {

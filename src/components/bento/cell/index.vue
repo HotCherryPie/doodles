@@ -25,7 +25,7 @@ defineSlots<{
 <style lang="css" module>
 .content {
   position: relative;
-  contain: size;
+  contain: layout size style;
   grid-column-start: v-bind(x);
   grid-column-end: span v-bind(w);
   grid-row-start: v-bind(y);
