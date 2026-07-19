@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 import type { Slot } from 'vue';
 
 import type { Props } from './types';
@@ -14,10 +15,16 @@ withDefaults(defineProps<Props>(), {
 defineSlots<{
   default: Slot;
 }>();
+
+const key = ref(1);
 </script>
 
 <template>
-  <div :class="[$style.content, !cover && $style.center]">
+  <div
+    :key
+    :class="[$style.content, !cover && $style.center]"
+    @click="key += 1"
+  >
     <slot />
   </div>
 </template>
