@@ -32,8 +32,10 @@ defineSlots<{
 
 <style lang="css" module>
 .it {
-  color: var(--color);
   width: max-content;
+  height: max-content;
+  font-family: Minecraft;
+  color: var(--color);
   text-shadow: 2px 2px rgb(from currentColor r g b / 0.25);
 
   position: relative;

@@ -23,4 +23,9 @@ export interface Props {
    * @defaultValue false
    */
   cover?: boolean | undefined;
+
+  /**
+   * @defaultValue false
+   */
+  subgrid?: boolean | undefined;
 }

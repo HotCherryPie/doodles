@@ -10,6 +10,7 @@ withDefaults(defineProps<Props>(), {
   x: 'auto',
   y: 'auto',
   cover: false,
+  subgrid: false,
 });
 
 defineSlots<{
@@ -22,7 +23,11 @@ const key = ref(1);
 <template>
   <div
     :key
-    :class="[$style.content, !cover && $style.center]"
+    :class="[
+      $style.content,
+      !cover && $style.center,
+      subgrid && $style.subgrid,
+    ]"
     @click="key += 1"
   >
     <slot />
@@ -37,10 +42,16 @@ const key = ref(1);
   grid-column-end: span v-bind(w);
   grid-row-start: v-bind(y);
   grid-row-end: span v-bind(h);
+  display: grid;
+}
+
+.subgrid {
+  contain: size style;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
 }
 
 .center {
-  display: grid;
   place-items: center;
 }
 </style>
