@@ -4,7 +4,7 @@ import { Bento } from '../../components';
 </script>
 
 <template>
-  <Bento.Cell :w="3" :h="3" inert>
+  <Bento.Cell :w="3" :h="3">
     <PanHeart :class="$style.heart" />
     <div v-if="false" :class="$style.text">
       <span style="--color: #ff218c">P</span>

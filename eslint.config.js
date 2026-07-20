@@ -6,7 +6,14 @@ const node = [];
 
 export default base({ node, tooling: toolingFiles }, [
   {
-    name: 'override-for-doodles-folder',
+    name: 'common',
+    rules: {
+      'unicorn/consistent-boolean-name': ['error', { prefixes: { with: true } }],
+    },
+  },
+  {
+    name: 'override-for-doodles-index',
+    files: ['./src/doodles/*/index.ts'],
     rules: {
       'import/no-default-export': 'off',
     },
