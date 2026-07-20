@@ -38,11 +38,11 @@ const key = ref(1);
 .content {
   position: relative;
   contain: layout size style;
+  display: grid;
   grid-column-start: v-bind(x);
   grid-column-end: span v-bind(w);
   grid-row-start: v-bind(y);
   grid-row-end: span v-bind(h);
-  display: grid;
 }
 
 .subgrid {

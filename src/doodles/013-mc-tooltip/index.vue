@@ -6,7 +6,7 @@ import Text from './text.vue';
 </script>
 
 <template>
-  <Bento.Cell :w="6" :h="5" cover subgrid>
+  <Bento.Cell :w="6" :h="5" cover>
     <Card :class="$style.card">
       <Text color="magenta" fancy>Bow of flame</Text>
     </Card>
@@ -15,9 +15,6 @@ import Text from './text.vue';
 
 <style lang="css" module>
 .card {
-  margin-inline: 12px;
   padding: 16px 20px;
-  grid-column: 1 / -1;
-  grid-row: 2 / -1;
 }
 </style>
