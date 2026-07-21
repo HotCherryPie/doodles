@@ -14,12 +14,10 @@ defineSlots<{
 
 <style module>
 .it {
-  position: relative;
   background-color: #120211;
   corner-shape: notch;
   border-radius: 4px;
   outline: 2px solid #48149a;
   outline-offset: -4px;
-  display: grid;
 }
 </style>
