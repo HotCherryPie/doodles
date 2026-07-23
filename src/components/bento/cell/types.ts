@@ -2,22 +2,22 @@ export interface Props {
   /**
    * @defaultValue 1
    */
-  w?: number | undefined;
+  w?: number | `${number}` | undefined;
 
   /**
    * @defaultValue 1
    */
-  h?: number | undefined;
+  h?: number | `${number}` | undefined;
 
   /**
    * @defaultValue 'auto'
    */
-  x?: number | 'auto' | undefined;
+  x?: number | `${number}` | 'auto' | undefined;
 
   /**
    * @defaultValue 'auto'
    */
-  y?: number | 'auto' | undefined;
+  y?: number | `${number}` | 'auto' | undefined;
 
   /**
    * @defaultValue false
@@ -28,4 +28,11 @@ export interface Props {
    * @defaultValue false
    */
   subgrid?: boolean | undefined;
+
+  /**
+   * Re-render on click.
+   *
+   * @defaultValue false
+   */
+  refreshable?: boolean | undefined;
 }

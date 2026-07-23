@@ -47,10 +47,17 @@ import { packs } from './sounds';
   display: grid;
   place-items: center;
 
+  transition-property: scale;
+  transition-duration: 250ms;
+
   svg {
     height: 0.8rem;
     width: 0.8rem;
     fill: currentColor;
+  }
+
+  &:hover {
+    scale: 1.05;
   }
 }
 </style>

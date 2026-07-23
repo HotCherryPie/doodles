@@ -9,8 +9,6 @@ withDefaults(defineProps<Props>(), {
   h: 1,
   x: 'auto',
   y: 'auto',
-  cover: false,
-  subgrid: false,
 });
 
 defineSlots<{
@@ -28,7 +26,7 @@ const key = ref(1);
       !cover && $style.center,
       subgrid && $style.subgrid,
     ]"
-    @click="key += 1"
+    @click="key += refreshable ? 1 : 0"
   >
     <slot />
   </div>
