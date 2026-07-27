@@ -1,0 +1,24 @@
+// https://code.visualstudio.com/docs/reference/variables-reference
+{
+  "version": "2.0.0",
+
+  "tasks": [
+    {
+      "label": "Create doodle",
+      "type": "shell",
+      "command": "node",
+      "args": ["./scripts/create-doodle.ts", "${input:doodleName}"],
+      "icon": { "id": "add", "color": "terminal.ansiGreen" },
+      "problemMatcher": []
+    }
+  ],
+
+  // https://code.visualstudio.com/docs/reference/variables-reference#_input-variables
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "doodleName",
+      "description": "Name of the doodle"
+    }
+  ]
+}

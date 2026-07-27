@@ -1,3 +1,3 @@
 export { default } from './index.vue';
 
-export const name = 'Controls';
+export const name = 'Sparky Text';

@@ -3,8 +3,8 @@ import { Bento } from '../components';
 import { doodles } from '../doodles';
 
 const withRulers = false;
-const scale = '32px';
-const gap = '8px';
+const scale = '2rem';
+const gap = '0.5rem';
 </script>
 
 <template>

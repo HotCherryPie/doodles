@@ -11,9 +11,12 @@
     "interactable",
     "nolyfill",
     "refreshable",
+    "scule",
+    "Shantell",
     "sonarjs",
     "subgrid",
     "superellipse",
-    "uncategorized"
+    "uncategorized",
+    "vueuse"
   ]
 }

@@ -76,6 +76,7 @@ onClickOutside(
   align-items: center;
   display: flex;
   flex-direction: column;
+  z-index: 1;
 
   & > * {
     grid-area: 1/1;

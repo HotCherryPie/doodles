@@ -4,6 +4,7 @@
     "@(67)/configs.js/tsconfig.base.node@24.json"
   ],
   "include": [
+    "scripts/**/*",
     "**/eslint.config.*",
     "**/prettier.config.*",
     "**/vite.config.ts"
