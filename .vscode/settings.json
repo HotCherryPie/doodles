@@ -57,27 +57,4 @@
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-
-  // https://microsoft.github.io/vscode-codicons/dist/codicon.html
-  "statusbar_command.commands": [
-    // {
-    //   "id": "custom:run-task",
-    //   "text": "$(new-file) Doodle",
-    //   "tooltip": "Select and run task",
-    //   "alignment": "right",
-    //   "command": "workbench.action.tasks.runTask",
-    //   "color": "#14d243",
-    //   "priority": 1000,
-    // }
-
-    {
-      "id": "custom:run-task",
-      "text": "$(play) Run Task",
-      "tooltip": "Select and run task",
-      "alignment": "right",
-      "command": "workbench.action.tasks.runTask",
-      "color": "#e80e44",
-      "priority": 1000
-    }
-  ]
 }

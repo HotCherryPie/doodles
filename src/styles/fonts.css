@@ -1,3 +1,10 @@
+/* TODO
+ * - Use font-display: block
+ * - Use locally installed fonts
+ * - All font-related css files should be inlined here
+ * - Use https://www.npmjs.com/package/vite-plugin-webfont-dl
+ */
+
 /* #region Remote */
 
 /* https://fonts.google.com/specimen/Inter */
@@ -21,12 +28,15 @@
 /* https://fonts.google.com/specimen/Shantell+Sans */
 @import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght,BNCE,INFM,SPAC@0,300..800,-100..100,0..100,0..100;1,300..800,-100..100,0..100,0..100&display=swap');
 
+/* https://fonts.google.com/specimen/Libre+Barcode+128 */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+128&display=swap');
+
 /* #endregion Remote */
 
 /* #region Local */
 
 @import url('../assets/fonts/blaktur/index.css');
 @import url('../assets/fonts/minecraft-seven/index.css');
-@import url('../assets/fonts/minecraft-fifty-narrow/index.css');
+@import url('../assets/fonts/minecraft-ten-v2/index.css');
 
 /* #endregion Local */

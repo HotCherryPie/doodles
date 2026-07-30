@@ -3,7 +3,7 @@ import { Bento } from '../../components';
 </script>
 
 <template>
-  <Bento.Cell w="4">
+  <Bento.Cell w="5">
     <div :class="$style.it">
       <svg
         xmlns="http://www.w3.org/2000/svg"
