@@ -44,6 +44,7 @@ export const setupClickAnimation = () => {
       pointer-events: none;
       width: 100lvw;
       height: 100lvh;
+      z-index: calc(infinity);
     `,
   });
 

@@ -23,8 +23,6 @@
   position: absolute;
   bottom: 10px;
   right: 10px;
-
-  opacity: 0.5;
 }
 
 .cutout {
@@ -34,10 +32,10 @@
 
   position: absolute;
   left: calc((50% - (var(--w) / 2)) - 1px);
-  top: calc(var(--y) - 2px);
+  top: calc(var(--y) - 1px);
   width: calc(var(--w) + 2px);
   height: calc(var(--h) + 2px);
-  border: 1px solid #ccc;
+  border: var(--box-corner-thickness) solid var(--box-corner-color);
   border-radius: 999px;
 }
 
