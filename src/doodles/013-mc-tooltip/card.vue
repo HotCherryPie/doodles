@@ -71,12 +71,10 @@ defineProps<{
 
 .it:hover {
   .layer1 {
-    border-radius: 8px;
     outline-color: #eee;
   }
 
   .layer2 {
-    border-radius: 8px;
     opacity: 1;
   }
 }

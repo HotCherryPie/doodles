@@ -6,8 +6,8 @@ defineSlots<{
 }>();
 
 defineProps<{
-  gap: CSSValueType.AbsoluteSize;
-  scale: CSSValueType.AbsoluteSize;
+  gap: CSSValueType.Length;
+  scale: CSSValueType.Length;
 }>();
 </script>
 

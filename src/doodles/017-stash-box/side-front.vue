@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div :class="$style.a">Side D</div>
+    <div :class="$style.a">Side S</div>
   </div>
 </template>
 
