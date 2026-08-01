@@ -1,6 +1,8 @@
 import { defineSound } from '@web-kits/audio';
 import type { SoundDefinition } from '@web-kits/audio';
 
+// More here https://audio.raphaelsalaja.com/library
+
 // eslint-disable-next-line ts/no-unnecessary-type-assertion
 const modules = import.meta.glob('./sounds/*.ts', { eager: true }) as Record<
   string,
@@ -17,5 +19,3 @@ export const packs = Object.fromEntries(
     ]),
   ),
 );
-
-console.log('>>> G', packs);

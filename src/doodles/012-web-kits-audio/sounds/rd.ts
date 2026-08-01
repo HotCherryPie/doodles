@@ -2,7 +2,6 @@
 
 import type { SoundDefinition } from '@web-kits/audio';
 
-// More here https://audio.raphaelsalaja.com/library
 export const rd = {
   press: {
     layers: [

@@ -4,11 +4,9 @@ import { Bento } from '../../components';
 </script>
 
 <template>
-  <Bento.Cell refreshable>
+  <Bento.Cell refreshable subgrid w="1" h="3">
+    <IosActivityIndicator mode="tint" color="#aaa" />
     <IosActivityIndicator mode="tint" color="#1e90ff" />
-  </Bento.Cell>
-
-  <Bento.Cell refreshable>
-    <IosActivityIndicator mode="accent" color="hsl(350deg 100% 55% / 100%)" />
+    <IosActivityIndicator mode="accent" color="#ff1a40" />
   </Bento.Cell>
 </template>

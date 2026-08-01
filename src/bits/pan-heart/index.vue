@@ -8,6 +8,7 @@
   max-width: max-content;
   max-height: max-content;
   padding-block-end: 0.1em;
+  text-box: trim-both cap alphabetic;
   user-select: none;
 
   color: transparent;

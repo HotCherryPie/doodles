@@ -35,6 +35,7 @@ import { Bento } from '../../components';
 }
 
 .heading {
+  text-box: trim-both cap alphabetic;
   font-size: 3rem;
   -webkit-text-stroke:
     1px #000,
@@ -42,6 +43,7 @@ import { Bento } from '../../components';
 }
 
 .subheading {
+  text-box: trim-both cap alphabetic;
   font-size: 1.75rem;
   display: inline-block;
   translate: -0.5ch 0.2lh;

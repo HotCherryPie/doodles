@@ -44,7 +44,9 @@ const key = ref(1);
 }
 
 .subgrid {
-  contain: size style;
+  /* `layout` don't work at all. */
+  /* `size` works, but element becomes 0 in height. */
+  contain: style;
   grid-template-columns: subgrid;
   grid-template-rows: subgrid;
 }

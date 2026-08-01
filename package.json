@@ -43,8 +43,8 @@
     "vue-router": "~5.2.0"
   },
   "devDependencies": {
-    "@(67)/configs.js": "github:HotCherryPie/configs.js.git#v0.0.0-alpha-24",
-    "@(67)/utils.css": "github:HotCherryPie/utils.css.git#v0.0.0-alpha-11",
+    "@(67)/configs.js": "github:HotCherryPie/configs.js.git#v0.0.0-alpha-25",
+    "@(67)/utils.css": "github:HotCherryPie/utils.css.git#v0.0.0-alpha-12",
     "@babel/types": "~8.0.4",
     "@types/node": "~26.1.2",
     "@vitejs/plugin-vue": "~6.0.8",
