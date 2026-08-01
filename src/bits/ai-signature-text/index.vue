@@ -40,6 +40,7 @@ defineProps<{
   color: transparent;
   text-box: trim-both cap text;
   animation: ai 5s infinite linear;
+  pointer-events: none;
 
   background-clip: text;
   background-attachment: local;

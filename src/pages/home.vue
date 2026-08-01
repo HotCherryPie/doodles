@@ -14,7 +14,7 @@ const gap = '0.5rem';
   <div :class="$style.toolbar">
     <label data-silent>
       <SwitchBox v-model="withRulers" />
-      Rulers
+      <p>Rulers</p>
     </label>
   </div>
 
@@ -49,7 +49,20 @@ const gap = '0.5rem';
     display: flex;
     align-items: center;
     gap: 0.25rem;
-    user-select: none;
+
+    p {
+      text-box: trim-both cap alphabetic;
+      user-select: none;
+      color: #555;
+      font-family: 'Nunito';
+      font-weight: 600;
+    }
+
+    &:has([aria-checked='true']) {
+      p {
+        color: #000;
+      }
+    }
   }
 }
 </style>

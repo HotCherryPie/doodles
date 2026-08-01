@@ -1,7 +1,16 @@
 <script setup lang="ts">
 import { sounds } from './sounds';
 
-const [model] = defineModel<boolean>({ required: true });
+withDefaults(
+  defineProps<{
+    color?: CSSValueType.Color | undefined;
+  }>(),
+  {
+    color: '#32c257',
+  },
+);
+
+const [model] = defineModel<boolean>({ default: false });
 
 function handleClick() {
   if (model.value) sounds.off();
@@ -9,6 +18,10 @@ function handleClick() {
 
   model.value = !model.value;
 }
+
+defineExpose({
+  touch: () => void handleClick(),
+});
 </script>
 
 <template>
@@ -80,7 +93,7 @@ function handleClick() {
 }
 
 .it.on {
-  background-color: #32c257;
+  background-color: v-bind('color');
 
   .handle {
     translate: 0 var(--dy);

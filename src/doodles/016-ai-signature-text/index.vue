@@ -7,6 +7,6 @@ import { Bento } from '../../components';
 
 <template>
   <Bento.Cell h="1" w="3">
-    <AiSignatureText text="AI thinking" />
+    <AiSignatureText style="font-size: 1.2rem" text="AI thinking" />
   </Bento.Cell>
 </template>
