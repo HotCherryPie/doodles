@@ -19,6 +19,6 @@
 
     "lib": ["ES2024", "DOM", "DOM.Iterable", "ESNext.Iterator"],
 
-    "types": ["vite/client"]
+    "types": ["vite/client", "./plugins/vite-plugin-file-meta/lib/client.d.ts"]
   }
 }

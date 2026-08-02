@@ -1,3 +1,4 @@
+import { directory } from 'virtual:file-meta';
 import type { Component } from 'vue';
 
 interface DoodleModule {
@@ -11,7 +12,8 @@ const imports = import.meta.glob('./*/index.ts', { eager: true }) as Record<
   DoodleModule
 >;
 
-export const doodles = Object.values(imports).map((it) => ({
+export const doodles = Object.entries(imports).map(([location, it]) => ({
   component: it.default,
   name: it.name,
+  location: `${directory}/${location.replace('./', '').replace(/index\.ts$/, '')}`,
 }));

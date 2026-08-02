@@ -5,6 +5,7 @@
   ],
   "include": [
     "scripts/**/*",
+    "plugins/**/*",
     "**/eslint.config.*",
     "**/prettier.config.*",
     "**/vite.config.ts"

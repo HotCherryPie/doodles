@@ -6,15 +6,15 @@ export const sounds = {
     layers: [
       {
         source: { type: `noise`, color: `white` },
-        filter: { type: `bandpass`, frequency: 950, resonance: 1.2 },
+        filter: { type: `bandpass`, frequency: 1000, resonance: 1 },
         envelope: { attack: 0, decay: 0.005, sustain: 0, release: 0.2 },
         delay: 0,
       },
       {
         source: { type: `noise`, color: `white` },
-        filter: { type: `bandpass`, frequency: 2950, resonance: 1.2 },
+        filter: { type: `bandpass`, frequency: 3000, resonance: 1 },
         envelope: { attack: 0, decay: 0.005, sustain: 0, release: 0.002 },
-        delay: 0.08,
+        delay: 0.09,
       },
     ],
   }),
@@ -23,8 +23,16 @@ export const sounds = {
     layers: [
       {
         source: { type: `noise`, color: `white` },
-        filter: { type: `bandpass`, frequency: 950, resonance: 1.2 },
+        filter: { type: `bandpass`, frequency: 4000, resonance: 1 },
+        envelope: { attack: 0, decay: 0.002, sustain: 0, release: 0.002 },
+        gain: 0.5,
+        delay: 0,
+      },
+      {
+        source: { type: `noise`, color: `white` },
+        filter: { type: `bandpass`, frequency: 950, resonance: 1 },
         envelope: { attack: 0, decay: 0.005, sustain: 0, release: 0.2 },
+        delay: 0.09,
       },
     ],
   }),

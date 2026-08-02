@@ -90,6 +90,7 @@ const isHoled = (side: 'front' | 'back' | 'right' | 'left') => {
     outline: calc(0.5 * var(--box-corner-thickness)) solid
       var(--box-corner-color);
     outline-offset: calc(-0.5 * var(--box-corner-thickness));
+    overflow: hidden;
   }
 
   .foreground {

@@ -1,0 +1,16 @@
+{
+  "name": "@(67)/vite-plugin-file-meta",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=24.14.1"
+  },
+  "exports": {
+    "./*": "./lib/*"
+  },
+  "dependencies": {
+    "pathe": "~2.0.3",
+    "vite": "~8.1.0"
+  }
+}
