@@ -20,6 +20,7 @@ export const an = {
     },
     gain: 0.34,
   },
+
   copy: {
     source: {
       type: `sine`,
@@ -36,6 +37,7 @@ export const an = {
     },
     gain: 0.22,
   },
+
   tab: {
     source: {
       type: `triangle`,
@@ -52,6 +54,7 @@ export const an = {
     },
     gain: 0.16,
   },
+
   soft: {
     source: {
       type: `noise`,
@@ -70,6 +73,7 @@ export const an = {
     },
     gain: 0.08,
   },
+
   link: {
     source: {
       type: `sine`,
@@ -86,6 +90,7 @@ export const an = {
     },
     gain: 0.1,
   },
+
   action: {
     source: {
       type: `square`,
@@ -102,6 +107,7 @@ export const an = {
     },
     gain: 0.09,
   },
+
   open: {
     source: {
       type: `triangle`,
@@ -118,6 +124,7 @@ export const an = {
     },
     gain: 0.13,
   },
+
   close: {
     source: {
       type: `triangle`,
@@ -134,6 +141,7 @@ export const an = {
     },
     gain: 0.11,
   },
+
   flip: {
     source: {
       type: `triangle`,
@@ -150,6 +158,7 @@ export const an = {
     },
     gain: 0.1,
   },
+
   hover: {
     source: {
       type: `sine`,

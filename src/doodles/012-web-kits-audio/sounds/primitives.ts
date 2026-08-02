@@ -78,4 +78,9 @@ export const primitives = {
     filter: { type: `bandpass`, frequency: 1950, resonance: 1.2 },
     envelope: { attack: 0, decay: 0.005, sustain: 0, release: 0.2 },
   },
+
+  i: {
+    source: { type: `sine`, frequency: { start: 520, end: 360 } },
+    envelope: { attack: 0.002, decay: 0.05, sustain: 0, release: 0.02 },
+  },
 } satisfies Record<string, SoundDefinition>;
