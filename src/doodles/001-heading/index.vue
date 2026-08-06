@@ -4,19 +4,13 @@ import { Bento } from '../../components';
 </script>
 
 <template>
-  <Bento.Cell
-    :x="1"
-    :y="1"
-    :w="6"
-    :h="3"
-    style="display: grid; place-items: center"
-  >
+  <Bento.Cell :x="1" :y="1" :w="6" :h="3">
     <div :class="$style.it">
       <h1 :class="$style.heading">Doodles</h1>
       <div style="display: flex; align-items: center">
         <span :class="$style.subheading">
           <span :class="$style.by">by</span>
-          <span :class="$style.author"> Artem </span>
+          <span :class="$style.author">Artem</span>
         </span>
         <PanHeart :class="$style.heart" />
       </div>

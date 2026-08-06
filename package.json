@@ -23,9 +23,6 @@
       "onFail": "error"
     }
   },
-  "workspaces": [
-    "plugins/*"
-  ],
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
@@ -48,7 +45,6 @@
   "devDependencies": {
     "@(67)/configs.js": "github:HotCherryPie/configs.js#v0.0.0-alpha-25",
     "@(67)/utils.css": "github:HotCherryPie/utils.css#v0.0.0-alpha-12",
-    "@(67)/vite-plugin-file-meta": "0.0.0",
     "@babel/types": "~8.0.4",
     "@types/node": "~26.1.2",
     "@vitejs/plugin-vue": "~6.0.8",
