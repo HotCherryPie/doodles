@@ -31,8 +31,8 @@ interface Ring {
   lineWidth: number;
 }
 
-const SPARK_COLOR = 'rgba(0, 0, 0, 0.78)';
-const GLOW_COLOR = 'rgba(0, 0, 0, 0.28)';
+const SPARK_COLOR = 'rgba(0, 0, 0, 0.4)';
+const GLOW_COLOR = 'rgba(0, 0, 0, 0.2)';
 
 const shouldPlayForPath = (path: EventTarget[]) =>
   path.every((it) => !isInteractableElement(it));
@@ -185,22 +185,23 @@ export const setupClickAnimation = () => {
     burst(clientX, clientY);
   }
 
+  useEventListener('resize', resizeCanvas);
+
   useEventListener('click', (event) => {
     if (!shouldPlayForPath(event.composedPath())) return;
     handlePoint(event.clientX, event.clientY);
   });
 
   // TODO: add check for `shouldPlayForPath`
-  useEventListener(
-    'touchstart',
-    (event) => {
-      for (const touch of event.changedTouches)
-        handlePoint(touch.clientX, touch.clientY);
-    },
-    { passive: true },
-  );
-
-  useEventListener('resize', resizeCanvas);
+  // TODO: consider usage of this
+  // useEventListener(
+  //   'touchstart',
+  //   (event) => {
+  //     for (const touch of event.changedTouches)
+  //       handlePoint(touch.clientX, touch.clientY);
+  //   },
+  //   { passive: true },
+  // );
 
   resizeCanvas();
   animate();
