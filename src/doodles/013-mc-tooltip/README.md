@@ -1,1 +1,4 @@
 - [MCD Weapons](https://minecraft.wiki/w/Dungeons:Weapon)
+- [MCD Icons](https://minecraft.wiki/w/Category:Minecraft_Dungeons_icons)
+  - [Enchantment icons](https://minecraft.wiki/w/Category:Minecraft_Dungeons_enchantment_icons)
+  - [Gear icons](https://minecraft.wiki/w/Category:Minecraft_Dungeons_gear_icons)

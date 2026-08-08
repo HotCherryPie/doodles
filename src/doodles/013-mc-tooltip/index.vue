@@ -6,11 +6,6 @@ import { Bento } from '../../components';
 
 import Card from './card.vue';
 import Preview from './preview.vue';
-import Text from './text.vue';
-
-const TITLE = 'The Pink Scoundrel';
-const DESCRIPTION =
-  'It would be a deadly mistake to underestimate the power of the Pink Scoundrel';
 
 const $card = useTemplateRef('card');
 const expanded = ref(false);
@@ -35,21 +30,11 @@ onClickOutside(
     @click="expanded = true"
   >
     <div :class="$style.previewAnchorRest" />
-    <Preview :class="$style.preview" />
+    <Preview :expanded :class="$style.preview" />
 
     <Card ref="card" :expanded>
+      <div :class="$style.previewAnchorCard" />
       <div :class="$style.content">
-        <div :class="$style.previewAnchorCard" />
-
-        <Text
-          v-if="false"
-          color="orange"
-          kind="fancy"
-          style="font-family: 'Minecraft Fifty Narrow'"
-          >{{ TITLE }}</Text
-        >
-        <Text v-if="false" kind="secondary">{{ DESCRIPTION }}</Text>
-
         <div style="width: 300px; height: 1px; background: #ccc0; z-index: 1" />
         <div
           style="
@@ -100,7 +85,6 @@ onClickOutside(
 }
 
 .content {
-  font-size: 1rem;
   display: flex;
   flex-direction: column;
   width: max-content;
