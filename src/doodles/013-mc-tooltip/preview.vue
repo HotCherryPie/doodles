@@ -11,6 +11,7 @@ defineProps<{
     <img :class="$style.pic" src="./items/mcd-the-pink-scoundrel-custom.png" />
 
     <Mist
+      v-if="false"
       :enabled="expanded"
       :class="$style.mist"
       style="outline: 1px solid red"

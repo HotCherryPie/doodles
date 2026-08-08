@@ -29,12 +29,9 @@ onClickOutside(
     :class="[$style.it, expanded && $style.expanded]"
     @click="expanded = true"
   >
-    <div :class="$style.previewAnchorRest" />
-    <Preview :expanded :class="$style.preview" />
-
     <Card ref="card" :expanded>
-      <div :class="$style.previewAnchorCard" />
       <div :class="$style.content">
+        <div :class="$style.previewAnchorCard" />
         <div style="width: 300px; height: 1px; background: #ccc0; z-index: 1" />
         <div
           style="
@@ -47,6 +44,9 @@ onClickOutside(
         />
       </div>
     </Card>
+
+    <div :class="$style.previewAnchorRest" />
+    <Preview :expanded :class="$style.preview" />
   </Bento.Cell>
 </template>
 
@@ -69,8 +69,9 @@ onClickOutside(
 }
 
 .preview {
-  transition-property: translate, scale, filter, width, height, top, left;
+  transition-property: translate, scale, filter, top, left;
   transition-duration: var(--duration-s);
+  will-change: top, left;
 
   filter: drop-shadow(6px 6px 2px #0002);
   pointer-events: none;
@@ -78,27 +79,31 @@ onClickOutside(
 
   position: absolute;
   position-anchor: --preview-anchor-rest;
+  position-visibility: always; /* To be visible even when anchor is hidden under overflow */
   width: 100%;
   aspect-ratio: 1;
-  top: anchor(top);
-  left: anchor(left);
+
+  top: calc(anchor(top) - 50%);
+  left: calc(anchor(left) - 50%);
 }
 
 .content {
   display: flex;
   flex-direction: column;
   width: max-content;
+  position: relative;
 }
 
 .previewAnchorRest {
-  /* outline: 2px solid blueviolet; */
+  outline: 4px solid blueviolet;
 
   anchor-name: --preview-anchor-rest;
-  align-self: start;
+  position: absolute;
+  top: 50%;
 }
 
 .previewAnchorCard {
-  /* outline: 2px solid lightsalmon; */
+  outline: 4px solid lightsalmon;
 
   transition-property: inset-inline-end, inset-block-start;
   transition-duration: var(--duration-s);
@@ -106,8 +111,8 @@ onClickOutside(
   position: absolute;
   anchor-name: --preview-anchor-card;
 
-  top: 15px;
-  right: calc(50% - -10px);
+  right: 20%;
+  top: 20%;
 }
 
 .it:not(.expanded):hover {
@@ -121,8 +126,7 @@ onClickOutside(
 .it.expanded {
   .preview {
     position-anchor: --preview-anchor-card;
-
-    width: 150px;
+    scale: 2.5;
   }
 }
 </style>
