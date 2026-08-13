@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useKeyModifier, whenever } from '@vueuse/core';
+import { useKeyModifier, whenever, useDocumentVisibility } from '@vueuse/core';
 import { ref, toRef } from 'vue';
 
 import { SwitchBox } from '../bits';
@@ -13,8 +13,20 @@ const gap = '0.5rem';
 const hoveredDoodleIndex = ref<number>();
 const lastHoveredDoodleIndex = ref<number>();
 
+const documentVisibility = useDocumentVisibility();
 const ctrl = useKeyModifier('Control', { initial: false });
+
 const inspected = toRef(() => ctrl.value);
+
+whenever(
+  () => documentVisibility.value === 'hidden',
+  () => (ctrl.value = false),
+);
+
+whenever(
+  () => !inspected.value,
+  () => (lastHoveredDoodleIndex.value = undefined),
+);
 
 const hoveredDoodle = toRef(() =>
   hoveredDoodleIndex.value === undefined ?
@@ -39,11 +51,6 @@ function handleToSourceLeave() {
   lastHoveredDoodleIndex.value = undefined;
 }
 
-whenever(
-  () => !inspected.value,
-  () => (lastHoveredDoodleIndex.value = undefined),
-);
-
 const gh = (it: string) =>
   `https://github.com/HotCherryPie/doodles/tree/main/${it}`;
 </script>
@@ -61,7 +68,6 @@ const gh = (it: string) =>
     <template v-for="(it, i) of doodles" :key="i">
       <component
         :is="it.component"
-        :data-location="gh(it.location)"
         :style="{
           'anchor-name':
             lastHoveredDoodleIndex === i ? `--hovered-doodle` : undefined,

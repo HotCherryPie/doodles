@@ -1,135 +1,98 @@
 <script setup lang="ts">
-import type { Container } from '@tsparticles/engine';
-import { onBeforeUnmount, onMounted, useTemplateRef, watchEffect } from 'vue';
+import { useTemplateRef, watchEffect } from 'vue';
+
+import { useTsParticles } from '../../hooks/use-ts-particles';
 
 const props = defineProps<{
   enabled: boolean;
 }>();
 
-let container: Container | undefined;
 const $canvas = useTemplateRef('canvas');
 
-async function run() {
-  const [a, b] = await Promise.allSettled([
-    import('@tsparticles/engine'),
-    import('tsparticles'),
-  ]);
+const { container } = useTsParticles($canvas, {
+  autoPlay: false,
+  detectRetina: true,
+  fpsLimit: 120,
 
-  const tsParticles =
-    a.status === 'fulfilled' ? a.value.tsParticles : undefined;
-  const loadFull = b.status === 'fulfilled' ? b.value.loadFull : undefined;
+  // https://particles.js.org/docs/interfaces/tsParticles_Emitters_Plugin.Options_Interfaces_IEmitter.IEmitter.html
+  emitters: {
+    direction: 'top',
+    position: { x: 50, y: 100 },
+    size: { width: 100, height: 0, mode: 'percent' },
+    rate: { quantity: 1, delay: 0.1 },
+  },
 
-  if (
-    tsParticles === undefined
-    || loadFull === undefined
-    || $canvas.value === null
-  )
-    return;
+  particles: {
+    number: { value: 0 },
+    shape: { type: 'square' },
+    size: {
+      value: { min: 0.5, max: 3 },
+    },
 
-  if (!loadFull._wasLoaded) await loadFull(tsParticles);
-
-  loadFull._wasLoaded = true;
-
-  console.log('>>> A', tsParticles);
-
-  // eslint-disable-next-line unicorn/no-top-level-assignment-in-function
-  container = await tsParticles.load({
-    // id: '',
-    element: $canvas.value,
-    options: {
-      autoPlay: false,
-      detectRetina: true,
-      fpsLimit: 120,
-
-      // https://particles.js.org/docs/interfaces/tsParticles_Emitters_Plugin.Options_Interfaces_IEmitter.IEmitter.html
-      emitters: {
-        direction: 'top',
-        position: { x: 50, y: 100 },
-        size: { width: 100, height: 0, mode: 'percent' },
-        rate: { quantity: 1, delay: 0.1 },
-      },
-
-      particles: {
-        number: { value: 0 },
-        shape: { type: 'square' },
-        size: {
-          value: { min: 0.5, max: 3 },
-        },
-
-        paint: {
-          // https://particles.js.org/docs/documents/tsParticles_Engine.Options_Particles_Fill.html
-          fill: {
-            enable: true,
-            color: { value: '#f00' },
-            opacity: { min: 0.5, max: 1 },
-          },
-        },
-
-        // https://particles.js.org/docs/documents/tsParticles_Engine.Options_Particles_Life.html
-        life: {
-          count: 1,
-          duration: {
-            value: { min: 2, max: 4 },
-            // sync: true,
-          },
-        },
-
-        // https://particles.js.org/docs/documents/tsParticles_Engine.Options_Particles_Destroy.html
-        destroy: {
-          mode: 'explode',
-          explode: {
-            maxSizeFactor: 0,
-            speed: 0.5,
-          },
-        },
-
-        // twinkle: {
-        //   particles: {
-        //     enable: true,
-        //     frequency: 1,
-        //     color: { value: '#ff0000' },
-        //     opacity: 1,
-        //   },
-        // },
-
-        // wobble: {
-        //   enable: true,
-        //   distance: { min: 0, max: 20 },
-        //   speed: { min: -5, max: 5 },
-        // },
-
-        // https://particles.js.org/docs/interfaces/tsParticles_Engine.Options_Interfaces_Particles_Move_IMove.IMove.html
-        move: {
-          enable: true,
-          straight: true,
-          speed: { min: 1, max: 3 },
-          // random: true,
-          // decay: { min: 0.001, max: 0.003 },
-          // spin: { enable: true },
-          // angle: { value: 100, offset: 100 },
-          drift: { min: -0.1, max: 0.1 },
-          size: true,
-
-          outModes: {
-            default: 'destroy',
-          },
-        },
+    paint: {
+      // https://particles.js.org/docs/documents/tsParticles_Engine.Options_Particles_Fill.html
+      fill: {
+        enable: true,
+        color: { value: '#f00' },
+        opacity: { min: 0.5, max: 1 },
       },
     },
-  });
 
-  console.log(tsParticles.items, 2);
-}
+    // https://particles.js.org/docs/documents/tsParticles_Engine.Options_Particles_Life.html
+    life: {
+      count: 1,
+      duration: {
+        value: { min: 2, max: 4 },
+        // sync: true,
+      },
+    },
 
-watchEffect(() => {
-  if (props.enabled) container?.play();
-  else container?.pause();
+    // https://particles.js.org/docs/documents/tsParticles_Engine.Options_Particles_Destroy.html
+    destroy: {
+      mode: 'explode',
+      explode: {
+        maxSizeFactor: 0,
+        speed: 0.5,
+      },
+    },
+
+    // twinkle: {
+    //   particles: {
+    //     enable: true,
+    //     frequency: 1,
+    //     color: { value: '#ff0000' },
+    //     opacity: 1,
+    //   },
+    // },
+
+    // wobble: {
+    //   enable: true,
+    //   distance: { min: 0, max: 20 },
+    //   speed: { min: -5, max: 5 },
+    // },
+
+    // https://particles.js.org/docs/interfaces/tsParticles_Engine.Options_Interfaces_Particles_Move_IMove.IMove.html
+    move: {
+      enable: true,
+      straight: true,
+      speed: { min: 1, max: 3 },
+      // random: true,
+      // decay: { min: 0.001, max: 0.003 },
+      // spin: { enable: true },
+      // angle: { value: 100, offset: 100 },
+      drift: { min: -0.1, max: 0.1 },
+      size: true,
+
+      outModes: {
+        default: 'destroy',
+      },
+    },
+  },
 });
 
-onMounted(() => run());
-onBeforeUnmount(() => {
-  console.log('Destroy2');
-  container?.destroy();
+watchEffect(() => {
+  if (props.enabled) container.value?.play();
+  else container.value?.pause();
 });
 </script>
 

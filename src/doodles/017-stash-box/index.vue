@@ -14,9 +14,9 @@ import Right from './side-right.vue';
 
 const holes: 'x' | 'z' = 'x' as 'x' | 'z';
 const color = '#fdfdfd';
-const w = '220px';
-const h = '120px';
-const l = '220px';
+const w = '12rem';
+const h = '6rem';
+const l = '12rem';
 </script>
 
 <template>

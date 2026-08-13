@@ -10,6 +10,10 @@ import { RouterView } from 'vue-router';
 <style lang="css">
 @import url(./styles/fonts.css);
 
+html {
+  font-size: 1.25rem; /* 20px most likely */
+}
+
 body {
   min-height: 100svh;
   display: flex;
