@@ -11,7 +11,10 @@ import { packs } from './sounds';
         <div style="font-family: sans-serif; font-size: 12px">
           {{ name }}
         </div>
-        <div style="display: flex; flex-wrap: wrap; gap: 4px">
+        <div
+          style="display: flex; flex-wrap: wrap; gap: 4px"
+          focusgroup="tablist nomemory"
+        >
           <button
             v-for="(sound, i) of pack"
             :key="i"
@@ -64,6 +67,10 @@ import { packs } from './sounds';
 
   &:hover {
     scale: 1.05;
+  }
+
+  &:focus-visible {
+    outline: 0.15rem solid #1e90ff59;
   }
 }
 </style>
