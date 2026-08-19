@@ -30,12 +30,7 @@ const stringToHashRange = (from: string, max: number) =>
           >
             <svg viewBox="0 0 24 24">
               <path
-                fill="currentColor"
-                opacity="0.05"
-                d="M19.27 13.52c.99-.77.99-2.27 0-3.04-3-2.32-6.35-4.14-9.92-5.41l-.65-.23a2.07 2.07 0 0 0-2.74 1.69c-.47 3.6-.47 7.34 0 10.94a2.07 2.07 0 0 0 2.74 1.7l.65-.24a36 36 0 0 0 9.92-5.41"
-              />
-              <path
-                fill="none"
+                fill="oklch(from currentColor l c h / 0.05)"
                 stroke="currentColor"
                 stroke-width="1"
                 d="M19.27 13.52c.99-.77.99-2.27 0-3.04-3-2.32-6.35-4.14-9.92-5.41l-.65-.23a2.07 2.07 0 0 0-2.74 1.69c-.47 3.6-.47 7.34 0 10.94a2.07 2.07 0 0 0 2.74 1.7l.65-.24a36 36 0 0 0 9.92-5.41"
@@ -58,6 +53,7 @@ const stringToHashRange = (from: string, max: number) =>
   font-size: 1.5rem;
   line-height: 1;
   font-family: 'void';
+  text-align: center;
 }
 
 .group {
