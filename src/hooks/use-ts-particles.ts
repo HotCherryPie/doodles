@@ -29,7 +29,7 @@ export const useTsParticles = (
 
     // Destroy container AFTER `load()` to make sure we
     //  don't end up with a lost container, if two or more
-    //  `init()` calls simultaneously.
+    //  `init()` was called simultaneously.
     container.value?.destroy();
 
     // Make sure we are still not in disposed scope after `await`
