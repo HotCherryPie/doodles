@@ -2,18 +2,22 @@
 import { Bento } from '../../components';
 
 import { packs } from './sounds';
+
+const stringToHashRange = (from: string, max: number) =>
+  Math.abs(
+    // eslint-disable-next-line unicorn/prefer-code-point
+    [...from].reduce((hash, it) => it.charCodeAt(0) + ((hash << 6) - hash), 0),
+  ) % max;
 </script>
 
 <template>
-  <Bento.Cell :w="4" :h="8" cover>
+  <Bento.Cell :w="4" :h="6" cover>
     <div :class="$style.root">
       <template v-for="(pack, name) of packs" :key="name">
-        <div style="font-family: sans-serif; font-size: 12px">
-          {{ name }}
-        </div>
         <div
-          style="display: flex; flex-wrap: wrap; gap: 4px"
+          :class="$style.group"
           focusgroup="tablist nomemory"
+          :style="{ '--c': stringToHashRange(name, 360) }"
         >
           <button
             v-for="(sound, i) of pack"
@@ -24,9 +28,17 @@ import { packs } from './sounds';
             :class="$style.btn"
             @click="sound()"
           >
-            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 24 24">
               <path
-                d="M4.74514 3.06414C4.41183 2.87665 4 3.11751 4 3.49993V12.5002C4 12.8826 4.41182 13.1235 4.74512 12.936L12.7454 8.43601C13.0852 8.24486 13.0852 7.75559 12.7454 7.56443L4.74514 3.06414ZM3 3.49993C3 2.35268 4.2355 1.63011 5.23541 2.19257L13.2357 6.69286C14.2551 7.26633 14.2551 8.73415 13.2356 9.30759L5.23537 13.8076C4.23546 14.37 3 13.6474 3 12.5002V3.49993Z"
+                fill="currentColor"
+                opacity="0.05"
+                d="M19.27 13.52c.99-.77.99-2.27 0-3.04-3-2.32-6.35-4.14-9.92-5.41l-.65-.23a2.07 2.07 0 0 0-2.74 1.69c-.47 3.6-.47 7.34 0 10.94a2.07 2.07 0 0 0 2.74 1.7l.65-.24a36 36 0 0 0 9.92-5.41"
+              />
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1"
+                d="M19.27 13.52c.99-.77.99-2.27 0-3.04-3-2.32-6.35-4.14-9.92-5.41l-.65-.23a2.07 2.07 0 0 0-2.74 1.69c-.47 3.6-.47 7.34 0 10.94a2.07 2.07 0 0 0 2.74 1.7l.65-.24a36 36 0 0 0 9.92-5.41"
               />
             </svg>
           </button>
@@ -37,40 +49,77 @@ import { packs } from './sounds';
 </template>
 
 <style lang="css" module>
+@font-face {
+  font-family: 'void';
+  src: url(data:font/woff2;base64,d09GMgABAAAAAAD8AAoAAAAAAiAAAAC0AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAABk4ALAocQAsGAAE2AiQDCAQgBS8HIBuKAfivCuyG8yeMhGjClgl2HVef4uHpUN+/+xkbNLzAJuCRh7ILWKrqWIAVTQYsmLUBDle9Pqn5CpUVmqpF/Q8bcBzoILrZ4DzjQHoj0EAEG5gU0CElipSon04UHXQP1tZ90AdCFRhLc6QUWD/bCQAFJAKJGRi/Iy+P013vpUFfAxAI/rJmm/v1wTuB/3+Fpg9dAYI+aKARAICSaBAoUgAAAKgWAhSBKnKgKGJq6lGqGE+8AcgA);
+}
+
 .root {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  flex-wrap: wrap;
-  justify-content: center;
+  font-size: 1.5rem;
+  line-height: 1;
+  font-family: 'void';
+}
+
+.group {
+  --bg: oklch(100% 0.1 var(--c));
+  --fg: oklch(50% 0.4 var(--c));
+  --ring-a: oklch(40% 0.2 var(--c) / 0.75);
+  --ring-b: oklch(90% 0.2 var(--c));
+
+  display: inline;
+  border-radius: 0.25em;
+  color: var(--fg);
+
+  &:focus-within {
+    outline: 0.2em solid var(--bg);
+    outline-offset: -0.1em;
+
+    .btn {
+      background-color: var(--bg);
+    }
+  }
+
+  &:not(:focus-within):has(:hover) {
+    outline: 0.05em solid var(--ring-b);
+    outline-offset: -0.05em;
+    z-index: 1;
+    position: relative;
+  }
 }
 
 .btn {
-  width: 1.25rem;
-  height: 1.25rem;
-  color: #1437ed;
-  border: 1px solid hsl(from currentColor h s 70%);
-  border-radius: 8px;
-  corner-shape: superellipse(1.6);
-  aspect-ratio: 1;
-  display: grid;
-  place-items: center;
+  position: relative;
+  height: 1em;
+  width: 1em;
 
-  transition-property: scale;
-  transition-duration: 250ms;
+  display: inline;
+  justify-items: center;
+
+  display: inline-flex; /* Fix for Firefox */
+  justify-content: center; /* Fix for Firefox */
+  align-items: center; /* Fix for Firefox */
 
   svg {
-    height: 0.8rem;
-    width: 0.8rem;
+    transition-property: scale;
+    transition-duration: 250ms;
+
+    height: 0.75em;
+    width: 0.75em;
     fill: currentColor;
+
+    position: absolute; /* Fix for Firefox */
   }
 
-  &:hover {
-    scale: 1.05;
+  &:hover,
+  &:active {
+    path:nth-child(1) {
+      opacity: 1;
+    }
   }
 
   &:focus-visible {
-    outline: 0.15rem solid #1e90ff59;
+    z-index: 1;
+    outline: 0.15em solid var(--ring-a);
   }
 }
 </style>

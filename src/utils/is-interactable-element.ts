@@ -29,6 +29,7 @@ const INTERACTABLE_ELEMENTS = [
   HTMLVideoElement,
 ];
 
+// TODO: add support for elements with `contenteditable` attr.
 export const isInteractableElement = (
   element: unknown,
 ): element is HTMLElement => {
