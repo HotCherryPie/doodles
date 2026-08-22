@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.it">
-    <div :class="$style.textA">PLAY</div>
+    <div :class="$style.textA">FREE</div>
 
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +22,7 @@
       ></path>
     </svg>
 
-    <div :class="$style.textB">FREE</div>
+    <div :class="$style.textB">GAMES</div>
   </div>
 </template>
 

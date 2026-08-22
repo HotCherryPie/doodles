@@ -2,10 +2,13 @@ import fs from 'node:fs/promises';
 
 import { consola } from 'consola';
 import { colorize } from 'consola/utils';
+import { dedent } from 'es-toolkit';
 import pathe from 'pathe';
 import { kebabCase, titleCase } from 'scule';
 
 import { createFile, DOODLES_DIRECTORY } from './utils.ts';
+
+await run();
 
 async function run() {
   const rawName = process.argv.at(2);
@@ -41,8 +44,6 @@ async function run() {
   consola.info(colorize('gray', pathe.join(directory, 'index.ts')));
 }
 
-await run();
-
 async function getLastFolderName(
   location: string,
 ): Promise<string | undefined> {
@@ -57,28 +58,30 @@ async function getLastFolderName(
 }
 
 function getIndexTsFileText(name: string) {
-  // TODO: use dedent
-  return `export { default } from './index.vue';
+  return dedent`
+    export { default } from './index.vue';
 
-export const name = '${titleCase(name)}';
-`;
+    export const name = '${titleCase(name)}';
+
+  `;
 }
 
 function getIndexVueFileText() {
-  // TODO: use dedent
-  return `<script setup lang="ts">
-import { Bento } from '../../components';
-</script>
+  return dedent`
+    <script setup lang="ts">
+    import { Bento } from '../../components';
+    </script>
 
-<template>
-  <Bento.Cell>
-    <div />
-  </Bento.Cell>
-</template>
+    <template>
+      <Bento.Cell>
+        <div />
+      </Bento.Cell>
+    </template>
 
-<style module>
-.it {
-}
-</style>
-`;
+    <style module>
+    .it {
+    }
+    </style>
+
+  `;
 }
