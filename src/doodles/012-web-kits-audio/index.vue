@@ -45,14 +45,14 @@ const stringToHashRange = (from: string, max: number) =>
 
 <style lang="css" module>
 @font-face {
-  font-family: 'void';
-  src: url(data:font/woff2;base64,d09GMgABAAAAAAD8AAoAAAAAAiAAAAC0AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAABk4ALAocQAsGAAE2AiQDCAQgBS8HIBuKAfivCuyG8yeMhGjClgl2HVef4uHpUN+/+xkbNLzAJuCRh7ILWKrqWIAVTQYsmLUBDle9Pqn5CpUVmqpF/Q8bcBzoILrZ4DzjQHoj0EAEG5gU0CElipSon04UHXQP1tZ90AdCFRhLc6QUWD/bCQAFJAKJGRi/Iy+P013vpUFfAxAI/rJmm/v1wTuB/3+Fpg9dAYI+aKARAICSaBAoUgAAAKgWAhSBKnKgKGJq6lGqGE+8AcgA);
+  font-family: 'fons';
+  src: url(data:font/woff2;base64,d09GMgABAAAAAADYAAoAAAAAAfgAAACRAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAABk4ALAocQAE2AiQDCAsGAAQgBQYHIBthAfgvCuwG7Rrd4iYMg5LqU0TZZLPfa3uCBGExyAo8AiFfOBzCEwgBJnLzILRYz/oGQLj+l531+0X9DxtwYJIwxhjgckLQwAFJASutQWvgVRhW3IeDQ9BALIKTcoFSguNfSAAMUAgKZ0ABUp+9f/b/hDYBBOFWP73XNPhevQ1ODZuA0GCCSQAAozAhGErgmwUA);
 }
 
 .root {
   font-size: 1.5rem;
   line-height: 1;
-  font-family: 'void';
+  font-family: 'fons';
   text-align: center;
 }
 
