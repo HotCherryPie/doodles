@@ -3,10 +3,15 @@ import { Bento } from '../../components';
 </script>
 
 <template>
-  <Bento.Cell w="4">
-    <div :class="$style.it">
+  <Bento.Cell w="4" h="2" subgrid>
+    <div :class="[$style.it, $style.a]">
       <div :class="$style.bg" />
       <div :class="$style.text">ULTIMATE</div>
+    </div>
+
+    <div :class="[$style.it, $style.b]">
+      <div :class="$style.bg" />
+      <div :class="$style.text">ELITE</div>
     </div>
   </Bento.Cell>
 </template>
@@ -14,6 +19,7 @@ import { Bento } from '../../components';
 <style module>
 .it {
   display: grid;
+  grid-column: 1/-1;
   font-size: 1.25rem;
 
   & > * {
@@ -22,24 +28,43 @@ import { Bento } from '../../components';
 }
 
 .bg {
-  background-color: crimson;
   width: 100%;
   justify-self: center;
   border-radius: 0.2em 0.2em 0.2em 0.2em;
   transform: skewX(-11deg);
-  z-index: -1;
-  box-shadow: 0 0 20px 0 #b51c394a;
 }
 
 .text {
-  font-family: 'Tactic Round Extended';
   font-style: italic;
   font-weight: 900;
   translate: -0.01em 0;
-  background-image: linear-gradient(to bottom, #fffa, #fff);
   background-clip: text;
   color: transparent;
   padding: 0.2em 0.2em;
   text-box: trim-both cap alphabetic;
+}
+
+.a {
+  .bg {
+    background-color: crimson;
+    box-shadow: 0 0 20px 0 #b51c394a;
+  }
+
+  .text {
+    font-family: 'Tactic Round Extended';
+    background-image: linear-gradient(to bottom, #fffb, #fff 70%);
+  }
+}
+
+.b {
+  .bg {
+    background-color: #fff;
+    border: 0.05em solid #c05858;
+  }
+
+  .text {
+    font-family: 'Tactic Round Extra Extended';
+    background-image: linear-gradient(to bottom, #580e0e, #ff0000);
+  }
 }
 </style>

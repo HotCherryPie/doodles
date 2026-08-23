@@ -27,6 +27,7 @@ const items = ['', 'Edit', 'Window', 'Help'];
   --gap: 0.75rem;
 
   font-family: 'SF Pro';
+  background-color: #fff;
 
   max-width: fit-content;
   min-width: fit-content;
