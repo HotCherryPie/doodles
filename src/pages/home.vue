@@ -166,6 +166,8 @@ const gh = (it: string) =>
   font-family: 'Shantell Sans';
 
   p {
+    font-weight: 300;
+
     &[secondary] {
       color: #0007;
     }
@@ -180,7 +182,7 @@ const gh = (it: string) =>
       text-box: trim-both cap alphabetic;
       user-select: none;
       color: #555;
-      font-weight: 450;
+      font-weight: 400;
     }
 
     &:has([aria-checked='true']) {

@@ -50,13 +50,33 @@ const stringToHashRange = (from: string, max: number) =>
 }
 
 .root {
+  --dur: 250ms;
+
   font-size: 1.5rem;
   line-height: 1;
   font-family: 'fons';
   text-align: center;
+
+  &:not(:has(:focus-visible)) {
+    &:has(:hover) {
+      .group:not(:has(:hover)) {
+        .btn {
+          /* Specified for .btn and not for .group to
+              prevent .group to moved to separate composing
+              layer. Avoids glitches during animation.
+           */
+          opacity: 0.25;
+        }
+      }
+    }
+  }
 }
 
 .group {
+  transition-property: opacity;
+  transition-duration: var(--dur);
+  /* isolation: isolate; */
+
   --bg: oklch(100% 0.1 var(--c));
   --fg: oklch(50% 0.4 var(--c));
   --ring-a: oklch(40% 0.2 var(--c) / 0.75);
@@ -66,7 +86,7 @@ const stringToHashRange = (from: string, max: number) =>
   border-radius: 0.25em;
   color: var(--fg);
 
-  &:focus-within {
+  &:has(:focus-visible) {
     outline: 0.2em solid var(--bg);
     outline-offset: -0.1em;
 
@@ -75,15 +95,32 @@ const stringToHashRange = (from: string, max: number) =>
     }
   }
 
-  &:not(:focus-within):has(:hover) {
-    outline: 0.05em solid var(--ring-b);
-    outline-offset: -0.05em;
-    z-index: 1;
-    position: relative;
+  &:not(:has(:focus-visible)) {
+    &:has(:hover) {
+      outline: 0.05em solid var(--ring-b);
+      outline-offset: -0.05em;
+      z-index: 1;
+      position: relative;
+
+      .btn {
+        svg {
+          scale: 1.1;
+        }
+      }
+
+      .btn:hover {
+        svg {
+          scale: 1.25;
+        }
+      }
+    }
   }
 }
 
 .btn {
+  transition-property: opacity;
+  transition-duration: var(--dur);
+
   position: relative;
   height: 1em;
   width: 1em;
@@ -96,8 +133,8 @@ const stringToHashRange = (from: string, max: number) =>
   align-items: center; /* Fix for Firefox */
 
   svg {
-    transition-property: scale;
-    transition-duration: 250ms;
+    transition-property: scale, opacity;
+    transition-duration: var(--dur);
 
     height: 0.75em;
     width: 0.75em;
