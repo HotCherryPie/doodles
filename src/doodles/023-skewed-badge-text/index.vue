@@ -51,7 +51,9 @@ import { Bento } from '../../components';
   }
 
   .text {
-    font-family: 'Tactic Round Extended';
+    font-family: 'Tactic Round';
+    font-weight: 800;
+    font-stretch: expanded;
     background-image: linear-gradient(to bottom, #fffb, #fff 70%);
   }
 }
@@ -63,7 +65,9 @@ import { Bento } from '../../components';
   }
 
   .text {
-    font-family: 'Tactic Round Extra Extended';
+    font-family: 'Tactic Round';
+    font-weight: 800;
+    font-stretch: extra-expanded;
     background-image: linear-gradient(to bottom, #580e0e, #ff0000);
   }
 }
