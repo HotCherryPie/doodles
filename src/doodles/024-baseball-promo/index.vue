@@ -85,12 +85,18 @@ const tournament = {
 
   display: grid;
   grid-template-areas: 'art tournament' 'art teams';
-  grid-template-columns: auto auto;
-  grid-template-rows: auto 1fr;
+  grid-template-columns: max-content auto;
+  grid-template-rows: max-content 1fr;
+  gap: 0 0.5rem;
 }
 
 .art {
   grid-area: art;
+
+  contain: size;
+  height: 100%;
+  aspect-ratio: 1;
+  max-inline-size: max-content;
 }
 
 .tournament {
@@ -105,6 +111,7 @@ const tournament = {
     text-transform: uppercase;
     opacity: 0.6;
     letter-spacing: 0.2ch;
+    font-weight: 800;
   }
 
   .dot {
@@ -118,7 +125,7 @@ const tournament = {
   .name {
     text-transform: uppercase;
     opacity: 0.7;
-    letter-spacing: 0.05ch;
+    letter-spacing: 0.1ch;
   }
 }
 
@@ -126,13 +133,17 @@ const tournament = {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 0.2em;
+  gap: 0.25em;
 
   .team {
     text-transform: uppercase;
-    font-size: 0.7em;
-    font-weight: 700;
+    font-size: 0.8em;
     text-box: trim-both cap alphabetic;
+
+    font-family: 'Tactic Sans';
+    font-weight: 800;
+    font-stretch: expanded;
+    font-style: italic;
   }
 }
 
