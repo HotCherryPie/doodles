@@ -35,19 +35,19 @@
     "@:nolyfill": "npx nolyfill"
   },
   "dependencies": {
-    "@tsparticles/engine": "~4.3.2",
+    "@tsparticles/engine": "~4.4.0",
     "@vueuse/core": "~14.4.0",
     "@web-kits/audio": "~0.1.0",
     "dompurify": "~3.4.14",
     "es-toolkit": "~1.51.0",
-    "tsparticles": "~4.3.2",
-    "type-fest": "~5.8.0",
+    "tsparticles": "~4.4.0",
+    "type-fest": "~5.9.0",
     "vue": "~3.5.42",
     "vue-component-type-helpers": "~3.3.11",
-    "vue-router": "~5.2.0"
+    "vue-router": "~5.3.0"
   },
   "devDependencies": {
-    "@(67)/configs.js": "github:HotCherryPie/configs.js#v0.0.0-alpha-26",
+    "@(67)/configs.js": "github:HotCherryPie/configs.js#v0.0.0-alpha-27",
     "@(67)/utils.css": "github:HotCherryPie/utils.css#v0.0.0-alpha-12",
     "@babel/types": "~8.0.4",
     "@types/node": "~26.4.0",
