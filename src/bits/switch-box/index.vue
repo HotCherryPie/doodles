@@ -1,14 +1,13 @@
 <script setup lang="ts">
 import { sounds } from './sounds';
 
-withDefaults(
-  defineProps<{
-    color?: CSSValueType.Color | undefined;
-  }>(),
-  {
-    color: '#32c257',
-  },
-);
+interface Props {
+  color?: CSSValueType.Color | undefined;
+}
+
+withDefaults(defineProps<Props>(), {
+  color: '#32c257',
+});
 
 const [model] = defineModel<boolean>({ default: false });
 

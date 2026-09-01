@@ -6,7 +6,7 @@ import Middle from './middle.vue';
 </script>
 
 <template>
-  <Bento.Cell w="5" h="2" subgrid>
+  <Bento.Cell w="4" h="2" subgrid>
     <Leading style="grid-area: 1 / 1 / 1 / -1" />
     <Middle style="grid-area: 2 / 1 / 2 / -1" />
   </Bento.Cell>
