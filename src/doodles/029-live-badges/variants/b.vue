@@ -8,7 +8,7 @@
 .it {
   --fill: #ed1453;
   padding: 0.3em 0.5em;
-  border-radius: 99px;
+  border-radius: 99em;
   background-color: var(--fill);
   box-shadow:
     0 0 0.03125em var(--fill),
@@ -22,8 +22,9 @@
 }
 
 .text {
-  font-family: 'Montserrat';
-  font-weight: 700;
+  font-family: 'Tactic Round';
+  font-weight: 800;
+
   color: #ffe8ef;
   text-shadow: 0 0.0625em 0.0625em #b8004f;
   filter: blur(0.01625em);
