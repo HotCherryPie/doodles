@@ -11,7 +11,7 @@ import { Bento } from '../../components';
 <style module>
 .it {
   color: #98a2f6;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   font-family: 'Nunito';
   font-weight: 900;
   padding: 0.3em 0.3em;
