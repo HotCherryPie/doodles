@@ -44,11 +44,6 @@ function handleTextChange(event: InputEvent) {
 </template>
 
 <style module>
-@font-face {
-  font-family: 'Anja Eliane';
-  src: url('./anja-eliane.ttf');
-}
-
 .it {
   font-size: 4rem;
   display: grid;

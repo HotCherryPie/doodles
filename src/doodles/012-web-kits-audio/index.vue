@@ -44,17 +44,11 @@ const stringToHashRange = (from: string, max: number) =>
 </template>
 
 <style lang="css" module>
-@font-face {
-  font-family: 'fons';
-  src: url(data:font/woff2;base64,d09GMgABAAAAAADYAAoAAAAAAfgAAACRAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAABk4ALAocQAE2AiQDCAsGAAQgBQYHIBthAfgvCuwG7Rrd4iYMg5LqU0TZZLPfa3uCBGExyAo8AiFfOBzCEwgBJnLzILRYz/oGQLj+l531+0X9DxtwYJIwxhjgckLQwAFJASutQWvgVRhW3IeDQ9BALIKTcoFSguNfSAAMUAgKZ0ABUp+9f/b/hDYBBOFWP73XNPhevQ1ODZuA0GCCSQAAozAhGErgmwUA);
-}
-
 .root {
   --dur: 250ms;
 
   font-size: 1.5rem;
   line-height: 1;
-  font-family: 'fons';
   text-align: center;
 
   &:not(:has(:focus-visible)) {

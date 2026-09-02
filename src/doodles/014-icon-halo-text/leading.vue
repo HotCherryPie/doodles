@@ -20,7 +20,7 @@
       ></path>
     </svg>
 
-    <div :class="$style.text">Gaming services</div>
+    <div :class="$style.text">Gaming service</div>
   </div>
 </template>
 

@@ -18,11 +18,6 @@ import { Bento } from '../../components';
 </template>
 
 <style module>
-@font-face {
-  font-family: 'Bangers';
-  src: url('./bangers.ttf');
-}
-
 .it {
   display: grid;
   place-items: center;

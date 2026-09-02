@@ -1,0 +1,111 @@
+@font-face {
+  font-family: 'Tactic Sans';
+  src: url(./thin.otf);
+  font-style: normal;
+  font-stretch: ultra-expanded;
+  font-weight: 100; /* 250 by font file */
+}
+
+@font-face {
+  font-family: 'Tactic Sans';
+  src: url(./thin-italic.otf);
+  font-style: italic;
+  font-stretch: ultra-expanded;
+  font-weight: 100; /* 250 by font file */
+}
+
+@font-face {
+  font-family: 'Tactic Sans';
+  src: url(./light.otf);
+  font-style: normal;
+  font-stretch: ultra-expanded;
+  font-weight: 300; /* 300 by font file */
+}
+
+@font-face {
+  font-family: 'Tactic Sans';
+  src: url(./light-italic.otf);
+  font-style: italic;
+  font-stretch: ultra-expanded;
+  font-weight: 300; /* 300 by font file */
+}
+
+@font-face {
+  font-family: 'Tactic Sans';
+  src: url(./regular.otf);
+  font-style: normal;
+  font-stretch: ultra-expanded;
+  font-weight: 400; /* 400 by font file */
+}
+
+@font-face {
+  font-family: 'Tactic Sans';
+  src: url(./regular-italic.otf);
+  font-style: italic;
+  font-stretch: ultra-expanded;
+  font-weight: 400; /* 400 by font file */
+}
+
+@font-face {
+  font-family: 'Tactic Sans';
+  src: url(./medium.otf);
+  font-style: normal;
+  font-stretch: ultra-expanded;
+  font-weight: 500; /* 500 by font file */
+}
+
+@font-face {
+  font-family: 'Tactic Sans';
+  src: url(./medium-italic.otf);
+  font-style: italic;
+  font-stretch: ultra-expanded;
+  font-weight: 500; /* 500 by font file */
+}
+
+@font-face {
+  font-family: 'Tactic Sans';
+  src: url(./bold.otf);
+  font-style: normal;
+  font-stretch: ultra-expanded;
+  font-weight: 700; /* 700 by font file */
+}
+
+@font-face {
+  font-family: 'Tactic Sans';
+  src: url(./bold-italic.otf);
+  font-style: italic;
+  font-stretch: ultra-expanded;
+  font-weight: 700; /* 700 by font file */
+}
+
+@font-face {
+  font-family: 'Tactic Sans';
+  src: url(./black.otf);
+  font-style: normal;
+  font-stretch: ultra-expanded;
+  font-weight: 800; /* 800 by font file */
+}
+
+@font-face {
+  font-family: 'Tactic Sans';
+  src: url(./black-italic.otf);
+  font-style: italic;
+  font-stretch: ultra-expanded;
+  font-weight: 800; /* 800 by font file */
+}
+
+@font-face {
+  font-family: 'Tactic Sans';
+  src: url(./ultra.otf);
+  font-style: normal;
+  font-stretch: ultra-expanded;
+  font-weight: 900; /* 900 by font file */
+}
+
+@font-face {
+  font-family: 'Tactic Sans';
+  src: url(./ultra-italic.otf);
+  font-style: italic;
+  font-stretch: ultra-expanded;
+  font-weight: 900; /* 900 by font file */
+}
