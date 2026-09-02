@@ -76,8 +76,9 @@ function handleTextChange(event: InputEvent) {
   pointer-events: all;
   user-select: auto;
   filter: none;
-  cursor: text;
   caret-color: #000;
+
+  cursor: text;
 }
 
 .glow {
