@@ -110,7 +110,7 @@ const gh = (it: string) =>
 .bento {
   margin: 1rem 1rem;
   padding: calc(v-bind(gap) / 2);
-  background-color: #f8f8f9;
+  background-color: #f9f9fb;
   outline: 1px solid #0001;
 
   &.rulers {
