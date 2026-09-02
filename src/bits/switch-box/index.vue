@@ -102,7 +102,9 @@ defineExpose({
 
 .it.on {
   background-color: v-bind('color');
+}
 
+.it:not(.on) {
   .handle {
     translate: 0 var(--dy);
   }
