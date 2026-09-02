@@ -1,5 +1,6 @@
 export * from './ai-signature-text';
 export * from './carton';
+export * from './coupon-text';
 export * from './ios-activity-indicator';
 export * from './pan-heart';
 export * from './sparky-text';
