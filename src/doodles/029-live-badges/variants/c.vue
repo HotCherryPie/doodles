@@ -6,12 +6,12 @@
 
 <style module>
 .it {
+  filter: contrast(1.5);
   --fill: #ed1453;
   padding: 0.3em 0.5em;
-  border-radius: 99em;
+  border-radius: 0.4em;
   background-color: var(--fill);
   box-shadow:
-    inset 0 0 0.3125em #fff,
     0 0 0.03125em var(--fill),
     0 0 0.0625em var(--fill),
     0 0 0.09375em var(--fill),
@@ -24,12 +24,15 @@
 
 .text {
   font-family: 'Tactic Round';
-  font-weight: 800;
+  font-weight: 600;
 
-  color: #ffe8ef;
-  text-shadow: 0 0.0625em 0.0625em #b8004f;
-  filter: blur(0.01625em);
-  opacity: 0.95;
+  color: #fff;
+  text-shadow:
+    0 0 0.4em #fff,
+    0 0 0.1em #fff,
+    0 0 0.05em #fff;
+  /* filter: blur(0.01625em); */
+  opacity: 0.8;
   text-box: trim-both cap alphabetic;
 }
 </style>

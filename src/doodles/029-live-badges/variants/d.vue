@@ -8,9 +8,10 @@
 .it {
   --fill: #ed1453;
   padding: 0.3em 0.5em;
-  border-radius: 0.4em;
+  border-radius: 99em;
   background-color: var(--fill);
   box-shadow:
+    inset 0 0 0.3125em #fff,
     0 0 0.03125em var(--fill),
     0 0 0.0625em var(--fill),
     0 0 0.09375em var(--fill),
