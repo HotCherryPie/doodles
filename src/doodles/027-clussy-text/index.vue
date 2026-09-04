@@ -4,8 +4,8 @@ import { Bento } from '../../components';
 
 <template>
   <!--
-    contain:layout/paint prevents mix-blend-mode
-    to work correctly.
+    contain:layout/paint prevents mix-blend-mode to work
+    correctly (because it creates stacking context).
   -->
   <Bento.Cell w="12" h="3" style="contain: size">
     <div :class="$style.textureA" />
