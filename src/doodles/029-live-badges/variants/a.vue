@@ -29,7 +29,7 @@
 
 .bg {
   background-color: crimson;
-  border-radius: 999px;
+  border-radius: 99em;
   border-radius: 0.5em / 50%;
   corner-shape: bevel;
   filter: url("data:image/svg+xml,\

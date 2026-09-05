@@ -38,9 +38,6 @@ import { Bento } from '../../components';
 .heading {
   text-box: trim-both cap alphabetic;
   font-size: 3rem;
-  -webkit-text-stroke:
-    1px #000,
-    2px #f00;
 }
 
 .subheading {

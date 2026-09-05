@@ -34,7 +34,7 @@ import { Bento } from '../../components';
   height: 100%;
   background-image: linear-gradient(90deg, #24f4ff, #ff47ff, #ff0);
   background-image: linear-gradient(90deg, #5ae4ff, #ff64ff, #ffeb00);
-  border-radius: 99px;
+  border-radius: 99em;
   z-index: 1;
   filter: blur(0.1em);
 

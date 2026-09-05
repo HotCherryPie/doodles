@@ -40,7 +40,7 @@ defineSlots<{
 
   width: max-content;
   height: max-content;
-  text-shadow: 2px 2px rgb(from currentColor r g b / 0.15);
+  text-shadow: 0.1em 0.1em rgb(from currentColor r g b / 0.15);
 
   &::before {
     position: absolute;

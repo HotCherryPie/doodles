@@ -77,8 +77,8 @@ const tournament = {
   margin: 0.2em;
   /* background-color: #000;
   box-shadow:
-    0 0px 0.4em #0009,
-    0 0px 0.1em #000; */
+    0 0 0.4em #0009,
+    0 0 0.1em #000; */
 
   align-self: stretch;
   padding: 0.1em;

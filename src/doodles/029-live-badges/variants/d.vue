@@ -17,9 +17,9 @@
     0 0 0.09375em var(--fill),
     0 0 0.125em var(--fill),
     0 0 0.15625em var(--fill),
-    rgb(from var(--fill) r g b / 0.7) 0px 0px 0.1875em,
-    rgb(from var(--fill) r g b / 0.7) 0px 0px 0.3125em,
-    rgb(from var(--fill) r g b / 0.7) 0px 0px 0.625em;
+    rgb(from var(--fill) r g b / 0.7) 0 0 0.1875em,
+    rgb(from var(--fill) r g b / 0.7) 0 0 0.3125em,
+    rgb(from var(--fill) r g b / 0.7) 0 0 0.625em;
 }
 
 .text {
