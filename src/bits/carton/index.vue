@@ -105,8 +105,8 @@ const isHoled = (side: 'front' | 'back' | 'right' | 'left') => {
   .holed {
     mask-mode: luminance;
     mask-image: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg">\
-      <rect width="100%" height="100%" fill="%23ffffff"></rect>\
-      <rect x="calc(50% - 30px)" y="30px" width="60px" height="20px" fill="%23000000" rx="10px" ry="10px"></rect>\
+      <rect width="100%" height="100%" fill="%23fff" />\
+      <rect x="calc(50% - 30px)" y="30px" width="60px" height="20px" fill="%23000" rx="10px" ry="10px" />\
     </svg>');
   }
 }
