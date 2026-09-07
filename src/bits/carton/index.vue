@@ -58,57 +58,60 @@ const isHoled = (side: 'front' | 'back' | 'right' | 'left') => {
 .side {
   position: absolute;
   transform-style: preserve-3d;
-  height: var(--box-height);
+  contain: size;
 
   &.front {
     width: var(--box-width);
+    height: var(--box-height);
     translate: -50% -50% calc(var(--box-length) / 2);
   }
 
   &.back {
     width: var(--box-width);
+    height: var(--box-height);
     rotate: y 180deg;
     translate: -50% -50% calc(var(--box-length) / -2);
   }
 
   &.right {
     width: var(--box-length);
+    height: var(--box-height);
     rotate: y 90deg;
     translate: calc(-50% + (var(--box-width) / 2)) -50%;
   }
 
   &.left {
     width: var(--box-length);
+    height: var(--box-height);
     rotate: y -90deg;
     translate: calc(-50% - (var(--box-width) / 2)) -50%;
   }
+}
 
-  .foreground,
-  .background {
-    position: absolute;
-    inset: 0;
-    outline: calc(0.5 * var(--box-corner-thickness)) solid
-      var(--box-corner-color);
-    outline-offset: calc(-0.5 * var(--box-corner-thickness));
-    overflow: hidden;
-  }
+.foreground,
+.background {
+  position: absolute;
+  inset: 0;
+  outline: calc(0.5 * var(--box-corner-thickness)) solid var(--box-corner-color);
+  outline-offset: calc(-0.5 * var(--box-corner-thickness));
+  overflow: hidden;
+}
 
-  .foreground {
-    background-color: var(--box-color);
-  }
+.foreground {
+  background-color: var(--box-color);
+}
 
-  .background {
-    background-color: hsl(from var(--box-color) h s calc(l * 0.9) / alpha);
-    translate: 0 0 -0.1px;
-  }
+.background {
+  background-color: hsl(from var(--box-color) h s calc(l * 0.9) / alpha);
+  translate: 0 0 -0.1px;
+}
 
-  .holed {
-    mask-mode: luminance;
-    mask-image: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg">\
-      <rect width="100%" height="100%" fill="%23fff" />\
-      <rect x="calc(50% - 30px)" y="30px" width="60px" height="20px" fill="%23000" rx="10px" ry="10px" />\
-    </svg>');
-  }
+.holed {
+  mask-mode: luminance;
+  mask-image: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg">\
+    <rect width="100%" height="100%" fill="%23fff" />\
+    <rect x="calc(50% - 30px)" y="30px" width="60px" height="20px" fill="%23000" rx="10px" ry="10px" />\
+  </svg>');
 }
 
 .floor {
