@@ -66,7 +66,7 @@ const handler = (event: Event) => {
     .composedPath()
     .some((it) => it instanceof HTMLElement && 'silent' in it.dataset);
 
-  if (!shouldNotPlay) play();
+  if (!shouldNotPlay) play({ jitter: { detune: 300 } });
 };
 
 export const setupClickSound = () => {
