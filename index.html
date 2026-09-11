@@ -1,13 +1,16 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-001">
   <head>
     <meta charset="UTF-8" />
+    <title>Doodles</title>
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+    <meta name="text-scale" content="scale" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     />
-    <title>Doodles</title>
+
     <style>
       /* TODO: consider moving outside of here.
        *  Maybe `import './app.css'` in app.vue?
@@ -17,7 +20,7 @@
       /* Lightning CSS is unable to handle
        *  @import url('@(67)/utils.css/reset') layer(reset);
        *  atm because it inlines stylesheet with @namespace rule to local @layer
-       *  declaration, which is not working obviously.
+       *  declaration, which doesn't work obviously.
        */
       @import url(https://cdn.jsdelivr.net/gh/HotCherryPie/utils.css@v0.0.0-alpha-12/lib/reset/index.css)
       layer(reset);
