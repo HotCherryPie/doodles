@@ -7,11 +7,18 @@ import { Bento } from '../../components';
     <div :class="$style.it">
       <div :class="$style.text">SMACK</div>
 
-      <svg stroke="#000" stroke-width="20" viewBox="154 148 1085 835">
+      <svg
+        viewBox="-4.5 -4.5 535 379"
+        style="scale: 1.6; translate: 7% -1%; z-index: -1"
+      >
         <path
-          d="M432 158c102 194 238 218 440 64 61 214 156 177 321 100-52 80-2 179 36 197-199 115-305 334-345 454a335 335 0 0 0-380-24c-42-148-128-229-329-182 22-65 15-139-11-187 79-53 92-120 69-187 140 21 176-71 199-235"
-          fill="#fff"
-        ></path>
+          stroke-width="7"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          fill="#ffed00"
+          stroke="#000"
+          d="M84 48c120 86.5 142 95 134-48 37.5 131.4 74.4 131.6 152 50-49.8 88-15.5 106.7 100 37-89 82-66 98 56 118-133-1-142 4-47 84-113-47-136.4-62-94 66-80-126.4-110.1-131-140 15-14-146-21-140-148-33 79-121 47.3-111.8-94-58 92.3-76.5 90.8-94-3-147 109 20 178.5 20.2 84-84"
+        />
       </svg>
     </div>
   </Bento.Cell>
@@ -28,11 +35,14 @@ import { Bento } from '../../components';
 }
 
 .text {
+  --stroke-color: #000;
+
   font-family: 'Bangers';
   font-size: 2rem;
   color: #fff;
-  -webkit-text-stroke: 0.1em #000;
+  -webkit-text-stroke: 0.125em var(--stroke-color);
   paint-order: stroke;
   rotate: 8deg;
+  text-shadow: 0.1em 0.1em var(--stroke-color);
 }
 </style>

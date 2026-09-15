@@ -7,6 +7,7 @@ import { Bento } from '../components';
 import { doodles } from '../doodles';
 
 const withRulers = ref(false);
+const withPlates = ref(false);
 const scale = '2rem';
 const gap = '0.5rem';
 
@@ -62,6 +63,7 @@ const gh = (it: string) =>
     :class="[
       $style.bento,
       withRulers && $style.rulers,
+      withPlates && $style.plates,
       inspected && $style.inspected,
     ]"
   >
@@ -99,6 +101,10 @@ const gh = (it: string) =>
       <SwitchBox v-model="withRulers" />
       <p>Rulers</p>
     </label>
+    <label data-silent>
+      <SwitchBox v-model="withPlates" />
+      <p>Plates</p>
+    </label>
 
     <div style="flex-grow: 1" />
 
@@ -116,6 +122,13 @@ const gh = (it: string) =>
   &.rulers {
     column-rule: 1px solid #0001;
     row-rule: 1px solid #0001;
+  }
+
+  &.plates {
+    > * {
+      background-color: #eef;
+      border-radius: 0.25rem;
+    }
   }
 
   &.inspected {
@@ -154,6 +167,7 @@ const gh = (it: string) =>
 
 .toolbar {
   padding: 0.25rem 1rem;
+  gap: 0 0.75rem;
   display: flex;
   align-items: center;
   grid-area: 1rem;

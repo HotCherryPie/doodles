@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { Bento } from '../../components';
 
-const location = ['~', 'articles', 'version-control', 'git'];
+const location = ['~', 'articles', 'vcs', 'git'];
 </script>
 
 <template>
-  <Bento.Cell w="8">
+  <Bento.Cell w="5">
     <nav :class="$style.it">
       <span v-for="(it, i) in location" :key="i">
         <a href="" @click.prevent>{{ it }}</a>
