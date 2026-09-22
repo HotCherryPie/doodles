@@ -120,8 +120,16 @@ const gh = (it: string) =>
   outline: 1px solid #0001;
 
   &.rulers {
-    column-rule: 1px solid #0001;
-    row-rule: 1px solid #0001;
+    rule: 1px solid #0001;
+    rule-break: none;
+    /* rule-break: intersection; */
+    /* rule-inset: 10px; */
+    rule-visibility-items: all;
+    rule-visibility-items: around;
+    /* rule-visibility-items: between; */
+    rule-inset-junction: calc(v-bind(gap) / -2);
+    /* rule-inset-cap: -100px; */
+    rule-inset-cap: -100px;
   }
 
   &.plates {
