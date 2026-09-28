@@ -1,4 +1,4 @@
-import fs from 'node:fs/promises';
+/* eslint ts/no-non-null-assertion: "warn" */
 
 import { consola } from 'consola';
 import { colorize } from 'consola/utils';
@@ -6,7 +6,7 @@ import { dedent } from 'es-toolkit';
 import pathe from 'pathe';
 import { kebabCase, titleCase } from 'scule';
 
-import { createFile, DOODLES_DIRECTORY } from './utils.ts';
+import { createFile, DOODLES_DIRECTORY, getDoodles } from './utils.ts';
 
 await run();
 
@@ -19,9 +19,8 @@ async function run() {
 
   const name = kebabCase(fixedName);
 
-  // eslint-disable-next-line ts/no-non-null-assertion
-  const lastDoodle = (await getLastFolderName(DOODLES_DIRECTORY))!;
-  // eslint-disable-next-line ts/no-non-null-assertion
+  const doodles = await getDoodles();
+  const lastDoodle = doodles.at(-1)!;
   const lastDoodleNumber = lastDoodle.split('-', 1)[0]!;
   const numberPadding = lastDoodleNumber.length;
   const number = (+lastDoodleNumber + 1)
@@ -42,19 +41,7 @@ async function run() {
     ),
   );
   consola.info(colorize('gray', pathe.join(directory, 'index.ts')));
-}
-
-async function getLastFolderName(
-  location: string,
-): Promise<string | undefined> {
-  const entries = await fs.readdir(location, { withFileTypes: true });
-
-  const folders = entries
-    .filter((entry) => entry.isDirectory())
-    .map((entry) => entry.name)
-    .toSorted((a, b) => a.localeCompare(b, undefined, { numeric: true }));
-
-  return folders.at(-1);
+  consola.info(colorize('gray', pathe.join(directory, 'index.vue')));
 }
 
 function getIndexTsFileText(name: string) {

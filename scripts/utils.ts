@@ -2,9 +2,13 @@ import fs from 'node:fs/promises';
 
 import pathe from 'pathe';
 
+export const DOODLES_DIRECTORY = src('doodles');
+export const BITS_DIRECTORY = src('bits');
+
 // eslint-disable-next-line unicorn/name-replacements
-export const src = (where: string) =>
-  pathe.resolve(import.meta.dirname, '../src', where);
+export function src(where: string) {
+  return pathe.resolve(import.meta.dirname, '../src', where);
+}
 
 export async function createFile(
   location: string,
@@ -15,5 +19,13 @@ export async function createFile(
   await fs.writeFile(location, content, { encoding: 'utf8', flag: 'wx' });
 }
 
-export const DOODLES_DIRECTORY = src('doodles');
-export const BITS_DIRECTORY = src('bits');
+export async function getDoodles() {
+  const entries = await fs.readdir(DOODLES_DIRECTORY, { withFileTypes: true });
+
+  const folders = entries
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => entry.name)
+    .toSorted((a, b) => a.localeCompare(b, undefined, { numeric: true }));
+
+  return folders;
+}

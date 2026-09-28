@@ -47,13 +47,11 @@ withDefaults(defineProps<Props>(), {
 
   filter: url("data:image/svg+xml,\
     <svg xmlns='http://www.w3.org/2000/svg'>\
-      <defs>\
-        <filter id='filter'>\
-          <feGaussianBlur in='SourceGraphic' stdDeviation='2' result='blur'></feGaussianBlur>\
-          <feColorMatrix in='blur' mode='matrix' values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 20 -8' result='goo'></feColorMatrix>\
-          <feComposite in='SourceGraphic' in2='goo' operator='atop'></feComposite>\
-        </filter>\
-      </defs>\
+      <filter id='filter'>\
+        <feGaussianBlur stdDeviation='2' />\
+        <feColorMatrix values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 20 -8' result='goo' />\
+        <feComposite in='SourceGraphic' in2='goo' operator='atop' />\
+      </filter>\
     </svg>#filter");
 }
 
