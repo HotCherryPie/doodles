@@ -1,21 +1,33 @@
 <script setup lang="ts">
 import { Bento } from '../../components';
 
+import Badge from './badge.vue';
 import GlossyText from './glossy-text.vue';
+import ShinyText from './shiny-text.vue';
 </script>
 
 <template>
-  <Bento.Cell w="7" h="6" cover>
-    <div :class="$style.box">
-      <div :class="$style.overhead">CLAIM</div>
+  <Bento.Cell w="7" h="4" cover>
+    <div :class="$style.card">
+      <div :class="$style.overhead">WELCOME</div>
 
-      <GlossyText :class="$style.heading">
+      <GlossyText :class="$style.heading" style="margin-block: -0.2em 0em">
         <span :class="$style.lv">&lsqb;</span>
         <span :class="$style.l">BONUS</span>
         <span :class="$style.lv">&rsqb;</span>
       </GlossyText>
 
-      <div :class="$style.badge">555 Free Spins</div>
+      <ShinyText
+        :class="$style.subheading"
+        style="margin-block: -0.4em 0em"
+        highlight="#000fff"
+      >
+        555 FREE SPINS
+      </ShinyText>
+
+      <Badge :class="$style.badge" style="margin-block: 0.5em 0em">
+        <ShinyText>CLAIM NOW</ShinyText>
+      </Badge>
     </div>
   </Bento.Cell>
 </template>
@@ -27,7 +39,6 @@ import GlossyText from './glossy-text.vue';
 }
 
 .overhead {
-  font-family: 'Montserrat';
   margin-block: 1em 0em;
   color: #fff;
   font-weight: 700;
@@ -35,8 +46,12 @@ import GlossyText from './glossy-text.vue';
 }
 
 .heading {
-  font-size: 2.5rem;
-  margin-block: -0.2em 0.25em;
+  font-size: 2.5em;
+}
+
+.subheading {
+  font-family: Nunito;
+  font-weight: 800;
 }
 
 .l {
@@ -51,7 +66,9 @@ import GlossyText from './glossy-text.vue';
   vertical-align: middle;
 }
 
-.box {
+.card {
+  font-family: 'Montserrat';
+
   border-radius: 2em;
   corner-shape: superellipse(2);
   display: flex;
@@ -63,7 +80,7 @@ import GlossyText from './glossy-text.vue';
     url(./bg.png),
     radial-gradient(
       84.04% 62.6% at 50% 0%,
-      #7c7cc7 0%,
+      #fff 0%,
       #4e4ea3 33.33%,
       #242452 66.67%,
       #1e1e2a 100%
@@ -78,37 +95,8 @@ import GlossyText from './glossy-text.vue';
 }
 
 .badge {
-  font-family: 'Montserrat';
-  box-sizing: border-box;
-  border-radius: 999px;
-  user-select: none;
-  color: #fff;
-  font-size: 1em;
-  font-weight: 700;
-  position: relative;
-  padding: 0.5em 0.75em;
-  background: rgba(83, 194, 250, 0.12);
-  text-box: trim-both cap alphabetic;
-  text-transform: uppercase;
-
-  &::before {
-    position: absolute;
-    padding: 1px;
-    border-radius: inherit;
-    background: linear-gradient(
-      130deg,
-      rgba(255, 255, 255, 0.9),
-      rgba(255, 255, 255, 0.2) 15%,
-      rgba(255, 255, 255, 0.2) 85%,
-      rgba(255, 255, 255, 0.9)
-    );
-    content: '';
-    inset: 0;
-    mask:
-      linear-gradient(#fff 0 0) content-box,
-      linear-gradient(#fff 0 0);
-    mask-composite: exclude;
-    pointer-events: none;
-  }
+  font-family: Nunito;
+  font-weight: 900;
+  font-size: 1.2em;
 }
 </style>
