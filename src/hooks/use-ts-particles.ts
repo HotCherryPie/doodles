@@ -18,8 +18,7 @@ export const useTsParticles = (
   let isDisposed = false;
 
   const init = async () => {
-    if (isDisposed) return;
-    if (!isLibsInitialized.value) return;
+    if (isDisposed || !isLibsInitialized.value) return;
 
     const element = toValue(root);
 

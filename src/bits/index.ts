@@ -2,6 +2,7 @@ export * from './ai-signature-text';
 export * from './box';
 export * from './carton';
 export * from './coupon-text';
+export * from './fever-text';
 export * from './ios-activity-indicator';
 export * from './pan-heart';
 export * from './sparky-text';
