@@ -38,28 +38,28 @@
     "@tsparticles/engine": "~4.4.0",
     "@vueuse/core": "~15.0.0",
     "@web-kits/audio": "~0.2.0",
-    "dompurify": "~3.4.16",
+    "dompurify": "~3.4.17",
     "es-toolkit": "~1.52.0",
     "tsparticles": "~4.4.0",
     "type-fest": "~5.10.0",
-    "vue": "~3.5.43",
-    "vue-component-type-helpers": "~3.3.11",
+    "vue": "~3.5.44",
+    "vue-component-type-helpers": "~3.3.13",
     "vue-router": "~5.3.1"
   },
   "devDependencies": {
     "@(67)/configs.js": "github:HotCherryPie/configs.js#v0.0.0-alpha-30",
     "@(67)/utils.css": "github:HotCherryPie/utils.css#v0.0.0-alpha-12",
     "@babel/types": "~8.0.6",
-    "@types/node": "~26.6.2",
-    "@vitejs/plugin-vue": "~6.0.9",
+    "@types/node": "~26.6.5",
+    "@vitejs/plugin-vue": "~6.0.10",
     "actions-up": "~1.21.0",
     "consola": "~3.4.2",
-    "eslint": "~10.11.0",
+    "eslint": "~10.13.0",
     "pathe": "~2.0.3",
-    "prettier": "~3.9.9",
+    "prettier": "~3.9.10",
     "scule": "~1.3.0",
     "typescript": "~6.0.3",
-    "vite": "8.3.1",
-    "vue-tsc": "~3.3.11"
+    "vite": "8.3.4",
+    "vue-tsc": "~3.3.13"
   }
 }
