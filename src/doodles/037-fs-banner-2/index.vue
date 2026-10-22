@@ -26,7 +26,7 @@ import ShinyText from './shiny-text.vue';
       </ShinyText>
 
       <Badge :class="$style.badge" style="margin-block: 0.5em 0em">
-        <ShinyText>CLAIM NOW</ShinyText>
+        Claim now
       </Badge>
     </div>
   </Bento.Cell>
@@ -96,7 +96,8 @@ import ShinyText from './shiny-text.vue';
 
 .badge {
   font-family: Nunito;
-  font-weight: 900;
-  font-size: 1.2em;
+  font-weight: 500;
+  font-size: 1em;
+  /* text-transform: uppercase; */
 }
 </style>
